@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "628173165644",
+    "project_id": "hrms-9f965",
+    "storage_bucket": "hrms-9f965.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628173165644:android:ed3f08cbe0c909b27a50e9",
+        "android_client_info": {
+          "package_name": "com.projecthrms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxhZbYbZFlAhHsh6Hiqz0nGlDjtVhUOgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
