@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
         marginBottom:30,
         fontSize:20,
         color:colors.midgrey
-
     },
     textplace:{
         fontSize:15,

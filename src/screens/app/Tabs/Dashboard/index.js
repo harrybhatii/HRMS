@@ -4,9 +4,11 @@ import styles from "./style";
 import AttractionCard from '../../../../Components/AttractionCard';
 import colors from '../../../../constants/colors';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
 
 
-const DashboardTab = ({ navigation }) => {
+const DashboardTab = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView>
       <ScrollView>
@@ -29,7 +31,7 @@ const DashboardTab = ({ navigation }) => {
               <AttractionCard
                 title='Leave Management'
                 iconName='person'
-                onPress={() => navigation.navigate('Leave')}
+                onPress={() => {navigation.navigate('Leave')}}
               />
               <AttractionCard
                 title="Attendance Management"

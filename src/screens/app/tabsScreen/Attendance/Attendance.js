@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import styles from './Style';
 
 const Attendance=()=> {
     return (
-      <View>
-        <Text> index </Text>
+      <View style={styles.container}>
+        <Text> Attendance </Text>
       </View>
     );
   }
