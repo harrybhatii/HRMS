@@ -7,12 +7,14 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 
 
+
 const DashboardTab = () => {
   const navigation = useNavigation();
   return (
     <SafeAreaView>
+      
       <ScrollView>
-        <View>
+        <View >
           <View style={styles.profiletab}>
             <Icon name='person' size={60} color={colors.midgrey} />
             <View style={styles.profileData}>

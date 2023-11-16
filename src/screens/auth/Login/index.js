@@ -1,44 +1,62 @@
-import React from "react";
-import { SafeAreaView, Text } from "react-native";
+import React, { useState } from "react";
+import { SafeAreaView, Text, View } from "react-native";
 import Button from "../../../Components/Button";
 import styles from "./style";
 import Title from "../../../Components/Title";
 import Input from "../../../Components/Input";
-import { ScrollView } from "react-native-gesture-handler";
-
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
+import { Ionicons } from '@expo/vector-icons';
 
 const Login = ({navigation}) => {
+    const [showPassword, setShowPassword] = useState(false);
+
+    const toggleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
+
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
-            <Title>Welcome! </Title>
-            <Text style={styles.text}>Login and get started</Text>
+                <Title>Welcome! </Title>
+                <Text style={styles.text}>Login and get started</Text>
 
-            
-            <Text style={styles.textplace}>
-                Email 
-                <Text style={styles.star} > *</Text>
+                <Text style={styles.textplace}>
+                    Email 
+                    <Text style={styles.star} > *</Text>
                 </Text>
-            <Input placeholder="Email" keyboardType="email-address" /> 
+                <Input placeholder="Email" keyboardType="email-address" /> 
 
-            <Text style={styles.textplace}>
-                Client ID 
-                <Text style={styles.star} > *</Text>
+                <Text style={styles.textplace}>
+                    Client ID 
+                    <Text style={styles.star} > *</Text>
                 </Text>
-            <Input placeholder="Client ID"/>
-            
-            <Text style={styles.textplace}>
-                Password 
-                <Text style={styles.star} > *</Text>
+                <Input placeholder="Client ID"/>
+                
+                <Text style={styles.textplace}>
+                    Password 
+                    <Text style={styles.star} > *</Text>
                 </Text>
-            <Input placeholder="Password" secureTextEntry/>
+                <View style={styles.passwordContainer}>
+                    <Input
+                        placeholder="Password"
+                        secureTextEntry={!showPassword}
+                    />
+                    <TouchableOpacity onPress={toggleShowPassword}>
+                        <Ionicons
+                            name={showPassword ? 'eye-off' : 'eye'}
+                            size={24}
+                            color="#7f8c8d"
+                            style={styles.eyeIcon}
+                        />
+                    </TouchableOpacity>
+                </View>
 
-            <Button onpress={()=> navigation.navigate('User')}> Login</Button>
+                <Button onPress={() => navigation.navigate('User')}> Login</Button>
 
-            <Text style={styles.footerText}>
-                Forget your password?
-                <Text style={styles.footerLink}> Reset here</Text>
-            </Text>
+                <Text style={styles.footerText}>
+                    Forget your password?
+                    <Text style={styles.footerLink}> Reset here</Text>
+                </Text>
             </ScrollView>
         </SafeAreaView>
     );

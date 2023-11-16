@@ -4,19 +4,22 @@ import styles from './styles';
 import Button from '../../../Components/Button';
 
 
-const Onboarding = ({navigation}) => {
+const Onboarding = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Text style={styles.head}>NEAD</Text>
-            <View style={{flex:1}}>
             <Image
-             style={styles.image}
-                source={require('../../../assets/LPAst.png')}
+                source={require('../../../assets/neadlogo.svg')}
+                style={{ width: 100, height: 100, borderWidth:2}} // Adjust the dimensions as needed
             />
-            <View style={styles.footer}/>
+            <View style={{ flex: 1 }}>
+                <Image
+                    style={styles.image}
+                    source={require('../../../assets/LPAst.png')}
+                />
+                <View style={styles.footer} />
             </View>
-           
-           
+
+
 
             <View style={styles.content}>
                 <Text style={styles.title}> Welcome to keyman HR! </Text>
@@ -24,7 +27,7 @@ const Onboarding = ({navigation}) => {
                     This is simple dummy text for testing
                 </Text>
 
-                <Button onpress={()=> navigation.navigate('Login')}>Log in</Button>
+                <Button onpress={() => navigation.navigate('Login')}>Log in</Button>
             </View>
             <Text style={styles.text}>Powered by Nead IT Solutions </Text>
         </View>
