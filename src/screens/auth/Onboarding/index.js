@@ -8,8 +8,7 @@ const Onboarding = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Image
-                source={require('../../../assets/neadlogo.svg')}
-                style={{ width: 100, height: 100, borderWidth:2}} // Adjust the dimensions as needed
+                source={require('../../../assets/nead-logo.png')}
             />
             <View style={{ flex: 1 }}>
                 <Image

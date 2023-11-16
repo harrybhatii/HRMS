@@ -5,7 +5,8 @@ import styles from "./style";
 import Title from "../../../Components/Title";
 import Input from "../../../Components/Input";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
-import IonIcon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 const Login = ({navigation}) => {
     const [showPassword, setShowPassword] = useState(false);
@@ -43,8 +44,8 @@ const Login = ({navigation}) => {
                         style={styles.passwordInput}
                     />
                     <TouchableOpacity onPress={toggleShowPassword}>
-                        <IonIcon
-                            name={showPassword ? 'eye-' : 'eye'}
+                        <Icon
+                            name={showPassword ? 'eye-off' : 'eye'}
                             size={24}
                             color="#7f8c8d"
                             style={styles.eyeIcon}
@@ -52,7 +53,7 @@ const Login = ({navigation}) => {
                     </TouchableOpacity>
                 </View>
 
-                <Button onPress={() => navigation.navigate('User')}> Login</Button>
+                <Button onpress={() => navigation.navigate('User')}> Login</Button>
 
                 <Text style={styles.footerText}>
                     Forget your password?

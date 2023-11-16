@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
         width:"90%"
     },
     passwordContainer:{
-        //display:"flex",
+        display:"flex",
         flexDirection:"row",
-       // justifyContent:"space-between",
+        justifyContent:"space-between",
         borderWidth: 2, // Border width
         borderColor:colors.midgrey, // Border color
         borderRadius: 8,

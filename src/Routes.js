@@ -19,7 +19,6 @@ import TravelExpense from './screens/app/tabsScreen/Travel&expense';
 import WorkFromHome from './screens/app/tabsScreen/WorkFromHome';
 import Performance from './screens/app/tabsScreen/Performance';
 import Leave from './screens/app/tabsScreen/Leave';
-import Dashboard from './screens/app/Tabs/Dashboard';
 
 const Stack = createStackNavigator()
 
@@ -32,12 +31,11 @@ const Routes = () => {
       <Stack.Screen name='Login' component={Login} />
       <Stack.Screen name='User' component={User} />
       <Stack.Screen name='Profile' component={Profile} />
-      <Stack.Screen name='Dashboard' component={Dashboard}/>
       <Stack.Screen name='AssetManage' component={AssetManage} />
       <Stack.Screen name='Attendance' component={Attendance} />
       <Stack.Screen name='EmployeOnbording' component={EmployeOnbording} />
       <Stack.Screen name='HrReports' component={HRReportsData} />
-      <Stack.Screen name='Leave' component={Leave}/>
+      <Stack.Screen name='Leave' component={Leave} />
       <Stack.Screen name='Payroll' component={Payroll} />
       <Stack.Screen name='Performance' component={Performance} />
       <Stack.Screen name='PhotoAttendance' component={photoAttandance} />
