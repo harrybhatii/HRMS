@@ -30,6 +30,24 @@ const styles = StyleSheet.create({
     },
     star:{
         color:colors.red
+    },
+    passwordInput:{
+        color:colors.black,
+        width:"90%"
+    },
+    passwordContainer:{
+        //display:"flex",
+        flexDirection:"row",
+       // justifyContent:"space-between",
+        borderWidth: 2, // Border width
+        borderColor:colors.midgrey, // Border color
+        borderRadius: 8,
+        alignItems:"center",
+        paddingHorizontal:8,
+        marginBottom:20,
+        backgroundColor:colors.lightgrey,
+        height:42
     }
 });
+
 export default styles;
