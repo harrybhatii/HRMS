@@ -10,33 +10,30 @@ import { useNavigation } from '@react-navigation/native';
 
 const DashboardTab = () => {
   const navigation = useNavigation();
+
   return (
     <SafeAreaView>
-      
-      <ScrollView>
+      <ScrollView> 
         <View >
           <View style={styles.profiletab}>
-            <Icon name='person' size={60} color={colors.midgrey} />
+            <Icon style={{borderWidth:1,borderRadius:100}} name='person' size={60} color={colors.red} />
             <View style={styles.profileData}>
               <Text style={styles.userInfo}>User Name=######</Text>
               <Text style={styles.userInfo}>User ID=######</Text>
             </View>
-
           </View>
 
-
-          <View style={styles.container}>
-
+          <View style={styles.container}>       
             <View style={styles.row}>
 
-
               <AttractionCard
-                title='Leave Management'
+                title='Leave '
                 iconName='person'
                 onPress={() => {navigation.navigate('Leave')}}
+
               />
               <AttractionCard
-                title="Attendance Management"
+                title="Attendance"
                 iconName="date-range"
                 onPress={() => navigation.navigate('Attendance')}
               />
@@ -46,55 +43,59 @@ const DashboardTab = () => {
                 onPress={() => navigation.navigate('WorkfromHome')}
               />
               <AttractionCard
-                title='Project task Management'
+                title='Project task'
                 iconName="assignment"
                 onPress={() => navigation.navigate('ProjectTask')}
               />
               <AttractionCard
-                title='Performance Management'
+                title='Performance '
                 iconName="assignment"
                 onPress={() => navigation.navigate('Performance')}
               />
               <AttractionCard
-                title='Asset Management'
+                title='Asset '
                 iconName="business"
                 onPress={() => navigation.navigate('AssetManage')}
               />
               <AttractionCard
-                title='Shift/Roster Management'
+                title='Shift/Roster '
                 iconName="schedule"
                 onPress={() => navigation.navigate('Shift')}
               />
               <AttractionCard
-                title='Employe On-Boarding Process'
+                title='Employe On-Boarding '
                 iconName="person-add"
                 onPress={() => navigation.navigate('EmployeOnbording')}
               />
               <AttractionCard
-                title='Recruitment And Hiring Process'
+                title='Recruitment And Hiring '
                 iconName="people"
                 onPress={() => navigation.navigate('RecruitmentHireing')}
               />
               <AttractionCard
-                title='Travel & Expense Management'
+                title='Travel & Expense '
                 iconName="flight"
                 onPress={() => navigation.navigate('TravelExpense')}
               />
               <AttractionCard
-                title='Payroll Management'
+                title='Payroll '
                 iconName="attach-money"
                 onPress={() => navigation.navigate('Payroll')}
               />
               <AttractionCard
                 title='HR Reports & Data Analytics'
                 iconName="bar-chart"
+                color=''
                 onPress={() => navigation.navigate('HrReports')}
               />
-
+ 
             </View>
+           
           </View>
+         
         </View>
-      </ScrollView>
+        </ScrollView>
+      
     </SafeAreaView>
   );
 };

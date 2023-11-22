@@ -3,12 +3,12 @@ import colors from '../../constants/colors';
 const { width } = Dimensions.get('window')
 const styles = StyleSheet.create({
     card: {
+       
         flexWrap: 'wrap',
         flexDirection:'row',
         marginBottom: 10,
         borderWidth:2,
         borderRadius:15,
-        textAlign:'center',
         alignContent:'center',
         width: 100,
         height: 100,
@@ -20,20 +20,21 @@ const styles = StyleSheet.create({
     title: {
         color: '#000000',
         fontSize: 10,
-        borderWidth:1,
         borderRadius:10,
-        width:100,
+        width:90,
         fontWeight: 'bold',
         textAlign:'center',
         marginRight:10,
-        borderColor:colors.white
+        
         
     },
     icon: {
         width: 40,
-        height:50,
-        padding:20,
-        marginLeft:10,
+        height:40,
+       marginLeft:30,
+       marginRight:20,
+       marginTop:5,
+
     },
     row: {
         flexDirection: 'row',

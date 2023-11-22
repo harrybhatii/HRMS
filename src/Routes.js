@@ -6,7 +6,7 @@ import Login from './screens/auth/Login';
 import User from './screens/app/UserNavigation';
 import Profile from './screens/app/Tabs/Profile';
 import AssetManage from './screens/app/tabsScreen/AssetManage';
-import Attendance from './screens/app/tabsScreen/Attendance/Attendance';
+import Attendance from './screens/app/tabsScreen/Attendance';
 import EmployeOnbording from './screens/app/tabsScreen/EmployeOnbording';
 import HRReportsData from './screens/app/tabsScreen/HR-Reports&Data';
 import Payroll from './screens/app/tabsScreen/Payroll';
@@ -19,6 +19,7 @@ import TravelExpense from './screens/app/tabsScreen/Travel&expense';
 import WorkFromHome from './screens/app/tabsScreen/WorkFromHome';
 import Performance from './screens/app/tabsScreen/Performance';
 import Leave from './screens/app/tabsScreen/Leave';
+import DrawerNavigator from './screens/app/DrawerNavigator';
 
 const Stack = createStackNavigator()
 

@@ -11,6 +11,9 @@ const colors={
     midblue:'#00ACEE',
     red:'#E16965',
     rrggbbaa:'#ff00ff00',
-    skyblue:'#4D4DFF'
+    skyblue:'#00ACEE',
+    cyan : '#00FFFF',
+    yellow:'#FFFF00',
+    magenta:'#FF00FF',
 }
 export default colors;
