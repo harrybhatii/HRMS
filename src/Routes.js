@@ -4,12 +4,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Onboarding from './screens/auth/Onboarding';
 import Login from './screens/auth/Login';
 import User from './screens/app/UserNavigation';
-import Profile from './screens/app/Tabs/Profile';
 import AssetManage from './screens/app/tabsScreen/AssetManage';
 import Attendance from './screens/app/tabsScreen/Attendance';
 import EmployeOnbording from './screens/app/tabsScreen/EmployeOnbording';
 import HRReportsData from './screens/app/tabsScreen/HR-Reports&Data';
-import Payroll from './screens/app/tabsScreen/Payroll';
 import photoAttandance from './screens/app/tabsScreen/photoAttandance';
 import ProjectTask from './screens/app/tabsScreen/ProjectTask';
 import punchAttandance from './screens/app/tabsScreen/punchAttandance';
@@ -19,7 +17,10 @@ import TravelExpense from './screens/app/tabsScreen/Travel&expense';
 import WorkFromHome from './screens/app/tabsScreen/WorkFromHome';
 import Performance from './screens/app/tabsScreen/Performance';
 import Leave from './screens/app/tabsScreen/Leave';
-import DrawerNavigator from './screens/app/DrawerNavigator';
+import Profile from './screens/app/Tabs/Profile';
+import Dashboard from './screens/app/Tabs/Dashboard';
+import Payslip from './screens/app/tabsScreen/Payslip';
+import MasterDetails from './screens/app/Tabs/ProfileTabs/MasterDetails';
 
 const Stack = createStackNavigator()
 
@@ -37,7 +38,7 @@ const Routes = () => {
       <Stack.Screen name='EmployeOnbording' component={EmployeOnbording} />
       <Stack.Screen name='HrReports' component={HRReportsData} />
       <Stack.Screen name='Leave' component={Leave} />
-      <Stack.Screen name='Payroll' component={Payroll} />
+      <Stack.Screen name='Payroll' component={Payslip} />
       <Stack.Screen name='Performance' component={Performance} />
       <Stack.Screen name='PhotoAttendance' component={photoAttandance} />
       <Stack.Screen name='ProjectTask' component={ProjectTask} />
@@ -46,6 +47,8 @@ const Routes = () => {
       <Stack.Screen name='Shift' component={Shift} />
       <Stack.Screen name='TravelExpense' component={TravelExpense} />
       <Stack.Screen name='WorkfromHome' component={WorkFromHome} />
+      <Stack.Screen name='Drawer Navigator' component={Dashboard}/>
+      <Stack.Screen name='Master Details' component={MasterDetails}/>
     </Stack.Navigator>
   )
 }

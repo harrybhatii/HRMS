@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
+const  Payslip=()=>{
 
- const BirthdayTab=()=> {
     return (
       <View>
-        <Text> Index </Text>
+        <Text> index </Text>
       </View>
     );
   }
-export default React.memo(BirthdayTab);
+export default React.memo(Payslip);

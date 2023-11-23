@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 const StatusTab=()=>{
     return(
       <View>
-        <Text>Status</Text>
+        <Text style={{color:"black"}}>Status</Text>
       </View>
     )
   };

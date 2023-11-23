@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-const Payroll =()=>{
-
+const Guidelines=()=> {
     return (
       <View>
         <Text> index </Text>
       </View>
     );
   }
-export default React.memo(Payroll);
+export default React.memo(Guidelines);

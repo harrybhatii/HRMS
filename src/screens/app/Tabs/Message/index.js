@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 const MessageTab=()=>{
     return(
       <View>
-        <Text>Message</Text>
+        <Text style={{color:"black"}}>Message</Text>
       </View>
     )
   };
