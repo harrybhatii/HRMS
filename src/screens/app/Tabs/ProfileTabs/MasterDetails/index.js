@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import colors from '../../../../../constants/colors';
 
 const MasterDetailsTab = () => {
   return (
@@ -39,6 +40,7 @@ const styles = StyleSheet.create({
   },
   section: {
     marginBottom: 20,
+    backgroundColor:colors.black
   },
   sectionTitle: {
     fontSize: 18,

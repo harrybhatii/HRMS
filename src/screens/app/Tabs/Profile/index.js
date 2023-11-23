@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import MasterDetails from '../ProfileTabs/MasterDetails';
 import Qualification from '../ProfileTabs/Qualification';
 import ProfessionalDetails from '../ProfileTabs/ProfessionalDetails';
-// Import your Contact content component
 
 const ProfileTab = () => {
   const [activeButton, setActiveButton] = useState('Master Details');
@@ -20,17 +19,21 @@ const ProfileTab = () => {
 
   return (
     <View>
-      {/* Top part with buttons */}
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between',gap:10, padding: 10 }}>
-        <TouchableOpacity onPress={() => setActiveButton('Master Details')}>
+         <View style={{ flexDirection:'row', flex:0, width:"100%", justifyContent: 'space-between',gap:10, padding: 10 , borderWidth:1}}>
+         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <TouchableOpacity style={{ marginRight: 10 }} onPress={() => setActiveButton('Master Details')}>
           <Text style={{ fontSize: 20, color: activeButton === 'Master Details' ? 'blue' : 'black' }}>Master Details</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => setActiveButton('Qualification')}>
-          <Text style={{ fontSize: 20, color: activeButton === 'Qualification' ? 'blue' : 'black' }}>Qualification</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => setActiveButton('ProfessionalDetails')}>
+       
+        <TouchableOpacity style={{ marginRight: 10 }} onPress={() => setActiveButton('ProfessionalDetails')}>
           <Text style={{ fontSize: 20, color: activeButton === 'ProfessionalDetails' ? 'blue' : 'black' }}>ProfessionalDetails</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={{ marginRight: 10 }} onPress={() => setActiveButton('Qualification')}>
+          <Text style={{ fontSize: 20, color: activeButton === 'Qualification' ? 'blue' : 'black' }}>Qualification</Text>
+        </TouchableOpacity>
+       
+        </ScrollView> 
       </View>
       {renderContent()}
     </View>
