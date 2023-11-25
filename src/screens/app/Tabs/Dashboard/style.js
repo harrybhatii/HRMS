@@ -13,6 +13,8 @@ const styles = StyleSheet.create({
         marginTop: 10,
         paddingLeft: 15,
         marginLeft: 10,
+        
+
     },
     row: {
         flexDirection: 'row',
@@ -29,13 +31,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginBottom: 70,
         marginTop: 70,
-        borderBottomLeftRadius: 10
+        backgroundColor:colors.skyblue,
 
     },
     userInfo: {
         fontSize: 16,
         marginBottom: 5,
-        color: colors.black,
+        color: colors.white,
         flexDirection: 'row',
         flexWrap: 'wrap'
     },

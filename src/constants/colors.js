@@ -9,6 +9,7 @@ const colors={
     purple:'#403572',
     blue:'#4681A3',
     midblue:'#00ACEE',
+    DrawerBlue:'#399BC0',
     red:'#E16965',
     rrggbbaa:'#ff00ff00',
     skyblue:'#00ACEE',

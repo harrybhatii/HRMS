@@ -47,7 +47,7 @@ const Routes = () => {
       <Stack.Screen name='Shift' component={Shift} />
       <Stack.Screen name='TravelExpense' component={TravelExpense} />
       <Stack.Screen name='WorkfromHome' component={WorkFromHome} />
-      <Stack.Screen name='Drawer Navigator' component={Dashboard}/>
+      <Stack.Screen name='Dashboard' component={Dashboard}/>
       <Stack.Screen name='Master Details' component={MasterDetails}/>
     </Stack.Navigator>
   )

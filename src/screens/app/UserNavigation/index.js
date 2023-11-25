@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { TouchableOpacity, View } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome'; // You can import icons from other icon libraries as well
+import { View, } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import DashboardTab from '../../app/Tabs/Dashboard';
 import StatusTab from '../../app/Tabs/Status';
 import MessageTab from '../../app/Tabs/Message';
@@ -19,6 +19,7 @@ import Leave from "../tabsScreen/Leave";
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import colors from '../../../constants/colors';
+import styles from './style';
 
 const Drawer = createDrawerNavigator();
 
@@ -28,30 +29,125 @@ const User = () => {
   return (
 
     <Drawer.Navigator
-      drawerStyle={{
-        backgroundColor: colors.skyblue,
+      screenOptions={{
+        drawerStyle: {
+          backgroundColor: colors.skyblue,
+          paddingBottom: 10,
+          paddingTop: 20,
+          borderWidth: 1,
+        },
+      }}
+    >
+      <Drawer.Screen
+        name="HRMS Dashboad"
+        component={DashboardTab}
+        options={{
+          drawerLabel: 'HRMS Dashboad',
+          drawerLabelStyle: { color: colors.white },
+          drawerIcon: ({ size }) => (
+            <Icon style={styles.picon} name="user" color={colors.midgrey} size={size} />
+          ),
+        }}
+      />
 
-      }}>
-      <Drawer.Screen name="HRMS Dashboard" component={TabNavigator} />
-      <Drawer.Screen name="my Profile" component={Profile} />
-      <Drawer.Screen name="Birthday" component={Birthday} />
-      <Drawer.Screen name="Holiday" component={Holiday} />
-      <Drawer.Screen name="Guidelines" component={Guidelines} />
-      <Drawer.Screen name="Announcement" component={Announcement} />
-      <Drawer.Screen name="Payslip" component={Payslip} />
-      <Drawer.Screen name="Leave Application" component={Leave} />
-      <Drawer.Screen name="Missed Punch Application" component={MissedPunchAttendance} />
-      <Drawer.Screen name="Attendance" component={Attendance} />
+      <Drawer.Screen
+        name="my Profile"
+        component={Profile}
+        options={{
+          drawerLabel: 'My Profile',
+          drawerLabelStyle: { color: colors.white },
+          drawerIcon: ({ size }) => (
+            <Icon style={styles.icon} name="user" color={colors.red} size={size} />
+          ),
+        }}
+      />
+
+      <Drawer.Screen
+        name="Birthday"
+        component={Birthday}
+        options={{
+          drawerLabel: 'Birthday',
+          drawerLabelStyle: { color: colors.white },
+          drawerIcon: ({ size }) => (
+            <Icon style={styles.icon} name="user" color={colors.red} size={size} />
+          ),
+        }}
+      />
+      <Drawer.Screen name="Holiday" component={Holiday}
+        options={{
+          drawerLabel: 'Holiday',
+          drawerLabelStyle: { color: colors.white },
+          drawerIcon: ({ size }) => (
+            <Icon style={styles.icon} name="user" color={colors.red} size={size} />
+          ),
+        }} />
+
+      <Drawer.Screen name="Guidelines" component={Guidelines}
+        options={{
+          drawerLabel: 'Guidelines',
+          drawerLabelStyle: { color: colors.white },
+          drawerIcon: ({ size }) => (
+            <Icon style={styles.icon} name="user" color={colors.red} size={size} />
+          ),
+        }} />
+
+      <Drawer.Screen name="Announcement" component={Announcement}
+        options={{
+          drawerLabel: 'Announcement',
+          drawerLabelStyle: { color: colors.white },
+          drawerIcon: ({ size }) => (
+            <Icon style={styles.icon} name="user" color={colors.red} size={size} />
+          ),
+        }} />
+
+      <Drawer.Screen name="Payslip" component={Payslip}
+        options={{
+          drawerLabel: 'Payslip',
+          drawerLabelStyle: { color: colors.white },
+          drawerIcon: ({ size }) => (
+            <Icon style={styles.icon} name="user" color={colors.red} size={size} />
+          ),
+        }} />
+
+      <Drawer.Screen name="Leave Application" component={Leave}
+        options={{
+          drawerLabel: 'Leave Application',
+          drawerLabelStyle: { color: colors.white },
+          drawerIcon: ({ size }) => (
+            <Icon style={styles.icon} name="user" color={colors.red} size={size} />
+          ),
+        }} />
+
+      <Drawer.Screen name="Missed Punch Application" component={MissedPunchAttendance}
+        options={{
+          drawerLabel: 'Missed Punch Application',
+          drawerLabelStyle: { color: colors.white },
+          drawerIcon: ({ size }) => (
+            <Icon style={styles.icon} name="user" color={colors.red} size={size} />
+          ),
+        }} />
+
+      <Drawer.Screen name="Attendance" component={Attendance}
+        options={{
+          drawerLabel: 'Attendance',
+          drawerLabelStyle: { color: colors.white },
+          drawerIcon: ({ size = 5 }) => (
+            <Icon style={styles.icon} name="user" color={colors.red} size={size} />
+          ),
+        }} />
+
     </Drawer.Navigator>
 
   );
 };
-const TabNavigator = () => {
+
+
+const TabNavgator = () => {
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
         name="Dashboard"
-        component={Dashboard}
+        component={User}
         options={{
           tabBarLabel: 'Dashboard',
           tabBarIcon: ({ color, size }) => (
@@ -90,16 +186,11 @@ const TabNavigator = () => {
         }}
       />
     </Tab.Navigator>
+
   );
+
 };
 
-const Dashboard = () => {
-  return (
-    <View>
-      <DashboardTab />
-    </View>
-  );
-};
 
 const Status = () => {
   return (
@@ -125,4 +216,4 @@ const Profile = () => {
   );
 };
 
-export default React.memo(User);
+export default React.memo(TabNavgator);

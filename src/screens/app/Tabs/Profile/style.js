@@ -1,0 +1,57 @@
+import { StyleSheet } from "react-native";
+import colors from "../../../../constants/colors";
+
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: colors.skyblue,
+    },
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: colors.skyblue,
+        height: 'auto',
+        width: "100%",
+        paddingLeft:20,
+       
+    },
+    headertext: {
+        color: colors.white,
+        padding: 16,
+        fontSize: 20,
+        fontWeight: '500',
+        height: 20,
+
+    },
+    tab: {
+        flexDirection: 'row',
+        flex: 0,
+        width: "100%",
+        justifyContent: 'space-between',
+        gap: 10, padding: 10,
+        borderWidth: 1
+    },
+    text: {
+        marginRight: 10,
+
+    },
+    tabText: {
+        fontSize: 20,
+        textAlign: 'center',
+        fontweight:'400',
+        lineheight: 21,
+
+    },
+    arrowButton: {
+        marginRight: 10,
+        height:24,
+        width:24,
+    }
+
+
+
+
+});
+export default styles;

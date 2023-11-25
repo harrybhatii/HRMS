@@ -1,6 +1,7 @@
 import React ,{ useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert } from 'react-native';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
+import styles from './style';
 
 const WorkFromHome = () => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
@@ -22,8 +23,6 @@ const WorkFromHome = () => {
 
   const submitRequest = () => {
     if (selectedDate) {
-      // Here, you would typically send the request to the server
-      // For this example, we'll just show an alert
       Alert.alert('Request Submitted', 'Your work from home request has been submitted successfully.');
     } else {
       Alert.alert('Error', 'Please select a date for work from home.');

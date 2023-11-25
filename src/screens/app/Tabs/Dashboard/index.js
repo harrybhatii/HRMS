@@ -7,16 +7,15 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 
 
-
 const DashboardTab = () => {
   const navigation = useNavigation();
 
   return (
     <SafeAreaView>
       <ScrollView> 
-        <View >
+        <View style={{backgroundColor:colors.skyblue}} >
           <View style={styles.profiletab}>
-            <Icon style={{borderWidth:1,borderRadius:100}} name='person' size={60} color={colors.red} />
+            <Icon style={{borderWidth:1,borderRadius:100, backgroundColor:colors.white}} name='person' size={60} color={colors.red}  />
             <View style={styles.profileData}>
               <Text style={styles.userInfo}>User Name=######</Text>
               <Text style={styles.userInfo}>User ID=######</Text>
@@ -88,14 +87,10 @@ const DashboardTab = () => {
                 color=''
                 onPress={() => navigation.navigate('HrReports')}
               />
- 
-            </View>
-           
-          </View>
-         
+            </View>          
+          </View>        
         </View>
         </ScrollView>
-      
     </SafeAreaView>
   );
 };
