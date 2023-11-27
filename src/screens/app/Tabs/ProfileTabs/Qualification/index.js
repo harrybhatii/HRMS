@@ -1,62 +1,43 @@
-import React, { useState } from 'react';
-import {ScrollView, TextInput, Button, StyleSheet } from 'react-native';
-import { Card, Title } from 'react-native-paper';
+import React, { useState } from 'react'
+import { View, Text, ScrollView, SafeAreaView, TouchableOpacity, Button } from 'react-native'
+import styles from './style';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import colors from '../../../../../constants/colors';
+
+
 
 const QualificationTab = () => {
-  const [degree, setDegree] = useState('');
-  const [institution, setInstitution] = useState('');
-  const [graduationDate, setGraduationDate] = useState('');
-  const [honors, setHonors] = useState('');
-
-  const saveQualificationDetails = () => {
-    // Add logic to save the qualification details to the backend/database
-    console.log('Qualification Details Saved!');
-  };
 
   return (
-    <ScrollView>
-      <Card style={styles.card}>
-        <Card.Content>
-          <Title>Qualification Details</Title>
-          <TextInput
-            label="Degree"
-            value={degree}
-            onChangeText={(text) => setDegree(text)}
-            style={styles.input}
-          />
-          <TextInput
-            label="Institution"
-            value={institution}
-            onChangeText={(text) => setInstitution(text)}
-            style={styles.input}
-          />
-          <TextInput
-            label="Graduation Date"
-            value={graduationDate}
-            onChangeText={(text) => setGraduationDate(text)}
-            style={styles.input}
-          />
-          <TextInput
-            label="Honors"
-            value={honors}
-            onChangeText={(text) => setHonors(text)}
-            style={styles.input}
-          />
-        </Card.Content>
-        <Card.Actions>
-          <Button onPress={saveQualificationDetails} title="Save Qualification Details" />
-        </Card.Actions>
-      </Card>
-    </ScrollView>
-  );
-};
+    <SafeAreaView>
+      <View style={styles.layout}>
+        <ScrollView>
+          <View>
+            <View style={{flexDirection:'row', alignItems:'center',gap:170,height:'auto',flex:1}}>
+              <View style={styles.dropdown}>
+                <TouchableOpacity style={{flexDirection:'row', gap:40, borderWidth:1,color:colors.lightgrey}}>
+                <Text style={styles.droptext}>All</Text>
+                <Icon name='keyboard-arrow-down' size={24} color={colors.black} />
+                </TouchableOpacity>
 
-const styles = StyleSheet.create({
-  card: {
-    margin: 16,
-  },
-  input: {
-    marginVertical: 8,
-  },
-});
+                <TouchableOpacity style={styles.addbtn}>
+                <Icon name='add' size={24} color={colors.white} />
+                <Text style={styles.addbtntext}>Add</Text>
+                </TouchableOpacity>
+              </View>
+              
+            </View>
+          </View>
+          <View style={styles.header}>
+            <Text style={styles.headerText}>Action </Text>
+            <Text style={styles.headerText}>s.No. </Text>
+            <Text style={styles.headerText}>Qualification </Text>
+            <Text style={styles.headerText}>Marks(%) </Text>
+          </View>
+        </ScrollView>
+      </View>
+    </SafeAreaView>
+  )
+}
+
 export default React.memo(QualificationTab);

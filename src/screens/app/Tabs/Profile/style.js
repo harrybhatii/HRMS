@@ -14,15 +14,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.skyblue,
         height: 'auto',
         width: "100%",
-        paddingLeft:20,
-       
-    },
-    headertext: {
-        color: colors.white,
-        padding: 16,
-        fontSize: 20,
-        fontWeight: '500',
-        height: 20,
+        paddingLeft: 20,
 
     },
     tab: {
@@ -30,7 +22,8 @@ const styles = StyleSheet.create({
         flex: 0,
         width: "100%",
         justifyContent: 'space-between',
-        gap: 10, padding: 10,
+        gap: 8,
+        padding: 10,
         borderWidth: 1
     },
     text: {
@@ -40,14 +33,13 @@ const styles = StyleSheet.create({
     tabText: {
         fontSize: 20,
         textAlign: 'center',
-        fontweight:'400',
-        lineheight: 21,
-
+        fontWeight: '400',
+        lineHeight: 21,
     },
     arrowButton: {
         marginRight: 10,
-        height:24,
-        width:24,
+        height: 24,
+        width: 24,
     }
 
 
