@@ -1,69 +1,70 @@
 import React from 'react';
-import { View, Text, ScrollView, SafeAreaView, TextInput } from 'react-native';
-import styles from './style'
+import { View, Text, SafeAreaView, TextInput, FlatList, ScrollView } from 'react-native';
+import styles from './style';
 
 const PersonalDetailsTab = () => {
+  const data = [
+    { sectionTitle: 'Present Address' },
+    { label: 'Address 1', value: ': H-15, BSI Building, 2nd floor' },
+    { label: 'Address 2', value: ': Sector 16' },
+    { label: 'District/city', value: ': Noida' },
+    { label: 'State', value: ': Uttar Pradesh' },
+    { label: 'Country', value: ': India' },
+    { label: 'Pin Code', value: ': 110023' },
+    { sectionTitle: 'Permanent Address' },
+    { label: 'Address 1', value: ': H-15, BSI Building, 2nd floor' },
+    { label: 'Address 2', value: ': Sector 16' },
+    { label: 'District/city', value: ': Noida' },
+    { label: 'State', value: ': Uttar Pradesh' },
+    { label: 'Country', value: ': India' },
+    { label: 'Pin Code', value: ': 110023' },
+    { sectionTitle: 'Contact Details' },
+    { label: 'Landline no.', value: ': 1241581854' },
+    { label: 'Personal no.', value: ': 8778484841' },
+    { label: 'Office Mobile no.', value: ': 6241651845' },
+    { sectionTitle: 'Email Address' },
+    { label: 'Email Personal', value: ': bddyb@gmail.com' },
+    { label: 'Email Official', value: ': cuhfeb@gmail.com' },
+    { sectionTitle: 'Emergency Details' },
+    { label: 'Contact Name', value: ': Harsh Bhati' },
+    { label: 'Contact no.', value: ': 874548841' },
+    { label: 'ESIC Dispensary', value: ': 158484KFJBVH4' },
+    { sectionTitle: 'Passport Details' },
+    { label: 'Passport no', value: ': IN54DD4333' },
+    { label: 'Issue Date ', value: ': 01-03-2021' },
+    { label: 'Expiry Date', value: ': 30-10-2028' },
+    { label: 'Country Issue', value: ': India' },
+    { sectionTitle: 'Driving License Details' },
+    { label: 'License no', value: ': IN54DD4333' },
+    { label: 'Issue Date ', value: ': 01-03-2021' },
+    { label: 'Expiry Date', value: ': 30-10-2028' },
+    { label: 'License', value: ': Both' },
+    { label: 'Country Issue', value: ': India' },
+    { sectionTitle: 'Personal Details' },
+    { label: 'Marital Status', value: ': Married' },
+    { label: 'Marriage Date ', value: ': 01-03-2011' },
+    { label: 'No. of Children', value: ': 02' },
+    { label: 'Blood Group', value: ': A+' },
+    { label: 'Height', value: ': 170cm' },
+    { label: 'Weight', value: ': 70kg' },
+    { label: 'Mode of Recruitment', value: ': Online' },
+    { label: 'Referenced By', value: ': Archana' },
+  ];
+
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <Text style={styles.sectionTitle}>Present Address</Text>
-        {renderInfo('Address 1', ': H-15,BSI Building, 2nd floor')}
-        {renderInfo('Address 2', ': Sector 16')}
-        {renderInfo("District/city", ': Noida')}
-        {renderInfo("State", ': Uttar pradesh')}
-        {renderInfo('Country', ': India')}
-        {renderInfo('Pin Code', ': 110023')}
-
-        <Text style={styles.sectionTitle}>Permanent Address</Text>
-        {renderInfo('Address 1', ': H-15,BSI Building, 2nd floor')}
-        {renderInfo('Address 2', ': Sector 16')}
-        {renderInfo("District/city", ': Noida')}
-        {renderInfo("State", ': Uttar pradesh')}
-        {renderInfo('Country', ': India')}
-        {renderInfo('Pin Code', ': 110023')}
-
-        <Text style={styles.sectionTitle}>Contact Details</Text>
-        {renderInfo('Landline no.', ': 1241581854')}
-        {renderInfo('Personal no.', ': 8778484841')}
-        {renderInfo('Office Mobile no.', ': 6241651845')}
-       
-
-        <Text style={styles.sectionTitle}>Email Address</Text>
-        {renderInfo('Email Personal', ': bddyb@gmail.com')}
-        {renderInfo('Email Official', ': cuhfeb@gmail.com')}
-
-        <Text style={styles.sectionTitle}>Emergency Details</Text>
-        {renderInfo('Contact Name', ': Harsh Bhati')}
-        {renderInfo('Contact no.', ': 874548841')}
-        {renderInfo('ESIC Dispensary', ': 158484KFJBVH4')}
-
-        <Text style={styles.sectionTitle}>Passport Details</Text>
-        {renderInfo('Passport no', ': IN54DD4333')}
-        {renderInfo('Issue Date ', ': 01-03-2021')}
-        {renderInfo('Expiry Date', ': 30-10-2028')}
-        {renderInfo('Country Issue', ': India')}
-
-
-        
-        <Text style={styles.sectionTitle}>Driving License Details</Text>
-        {renderInfo('License no', ': IN54DD4333')}
-        {renderInfo('Issue Date ', ': 01-03-2021')}
-        {renderInfo('Expiry Date', ': 30-10-2028')}
-        {renderInfo('License', ': Both')}
-        {renderInfo('Country Issue', ': India')}
-
-        <Text style={styles.sectionTitle}>Personal Details</Text>
-        {renderInfo('Merital Status', ': Married')}
-        {renderInfo('Marrage Date ', ': 01-03-2011')}
-        {renderInfo('No. on Children', ': 02')}
-        {renderInfo('Blood Group', ': A+')}
-        {renderInfo('Height', ': 170cm')}
-        {renderInfo('Weight', ': 70kg')}
-        {renderInfo('Mode of Recruitment', ': Online')}
-        {renderInfo('Refrenced By', ': Archana')}
-
-        
-      </ScrollView>
+    
+      <FlatList
+        data={data}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item }) => {
+          if (item.sectionTitle) {
+            return <Text style={styles.sectionTitle}>{item.sectionTitle}</Text>;
+          } else {
+            return renderInfo(item.label, item.value);
+          }
+        }}
+      />
     </SafeAreaView>
   );
 };
@@ -71,9 +72,12 @@ const PersonalDetailsTab = () => {
 const renderInfo = (label, value) => (
   <View style={styles.infoContainer}>
     <Text style={styles.labelText}>{label}</Text>
-    <TextInput style={styles.valueText} editable={false}>{value}</TextInput>
+    <TextInput style={styles.valueText} editable={false}>
+      {value}
+    </TextInput>
   </View>
 );
+
 
 
 export default React.memo(PersonalDetailsTab);

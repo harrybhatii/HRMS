@@ -17,8 +17,8 @@ const DashboardTab = () => {
           <View style={styles.profiletab}>
             <Icon style={{borderWidth:1,borderRadius:100, backgroundColor:colors.white}} name='person' size={60} color={colors.red}  />
             <View style={styles.profileData}>
-              <Text style={styles.userInfo}>User Name=######</Text>
-              <Text style={styles.userInfo}>User ID=######</Text>
+              <Text style={styles.userInfo}>User Name= Ritesh </Text>
+              <Text style={styles.userInfo}>User ID= 1234567</Text>
             </View>
           </View>
 

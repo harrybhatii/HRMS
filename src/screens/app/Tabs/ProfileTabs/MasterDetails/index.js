@@ -1,45 +1,55 @@
 import React from 'react';
-import { View, Text, ScrollView, SafeAreaView, TextInput } from 'react-native';
-import styles from './style'
+import { View, Text, SafeAreaView, TextInput, FlatList } from 'react-native';
+import styles from './style';
 
 const MasterDetailsTab = () => {
+  const data = [
+    { label: 'Emp Code', value: ': 12345' },
+    { label: 'Name', value: ': Mr. Puneet Kumar' },
+    { label: "Father's Name", value: ': Virender Kumar' },
+    { label: "Mother's Name", value: ': Rekha' },
+    { label: 'Spouse Name', value: ': Virender Kumar' },
+    { sectionTitle: 'Identity Card Details' },
+    { label: 'Pan', value: ': JSDFG4573G' },
+    { label: 'Aadhar Card no.', value: ': 215451654545' },
+    { label: 'Voter ID', value: ': 5G3FHB4G9B4T' },
+    { sectionTitle: 'Bank Details' },
+    { label: 'Payment Mode', value: ': UPI' },
+    { label: 'Bank Name', value: ': SBI' },
+    { label: 'Account Number', value: ': 6241651845' },
+    { label: 'IFSC Code', value: ': SBI0001845' },
+    { label: 'Account Name', value: ': Puneet Kumar' },
+    { sectionTitle: 'Joining Details' },
+    { label: 'Date Of Birth', value: ': 02/02/2002' },
+    { label: 'Date Of Joining', value: ': 02/02/2022' },
+    { label: 'Confirmation', value: ': Yes/No' },
+    { label: 'Date of Confirmation', value: ': 02/03/2022' },
+    { sectionTitle: 'Employee Work Details' },
+    { label: 'Branch', value: ': Noida' },
+    { label: 'Grade', value: ': Sales' },
+    { label: 'Designation', value: ': Manager' },
+    { label: 'Division', value: ': Niwwla' },
+    { label: 'Project', value: ': Paysence' },
+    { label: 'Cost Center', value: ': Ware House' },
+  ];
+
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <Text style={styles.sectionTitle}>Personal Information</Text>
-        {renderInfo('Emp Code', ': 12345')}
-        {renderInfo('Name', ': Mr. Puneet Kumar')}
-        {renderInfo("Father's Name", ': Virender Kumar')}
-        {renderInfo("Mother's Name", ': Rekha')}
-        {renderInfo('Spouse Name', ': Virender Kumar')}
-
-        <Text style={styles.sectionTitle}>Identity Card Details</Text>
-        {renderInfo('Pan', ': JSDFG4573G')}
-        {renderInfo('Aadhar Card no.', ': 215451654545')}
-        {renderInfo('Voter ID', ': 5G3FHB4G9B4T')}
-        {renderInfo('Driving Licence no.', ': 6241651845')}
-
-        <Text style={styles.sectionTitle}>Bank Details</Text>
-        {renderInfo('Payment Mode', ': UPI')}
-        {renderInfo('Bank Name', ': SBI')}
-        {renderInfo('Account Number', ': 6241651845')}
-        {renderInfo('IFSC Code', ': SBI0001845')}
-        {renderInfo('Account Name', ': Puneet Kumar')}
-
-        <Text style={styles.sectionTitle}>Joining Details</Text>
-        {renderInfo('Date Of Birth', ': 02/02/2002')}
-        {renderInfo('Date Of Joining', ': 02/02/2022')}
-        {renderInfo('Confirmation', ': Yes/No')}
-        {renderInfo('Date of Confirmation', ': 02/03/2022')}
-
-        <Text style={styles.sectionTitle}>Employee Work Details</Text>
-        {renderInfo('Branch', ': Noida')}
-        {renderInfo('Grade', ': Sales')}
-        {renderInfo('Designation', ': Manager')}
-        {renderInfo('Division', ': Niwwla')}
-        {renderInfo('Project', ': Paysence')}
-        {renderInfo('Cost Center', ': Ware House')}
-      </ScrollView>
+      <FlatList
+        data={data}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item }) => {
+          if (item.sectionTitle) {
+            return (
+              <Text style={styles.sectionTitle}>
+                {item.sectionTitle}
+              </Text>
+            );
+          } else {
+            return renderInfo(item.label, item.value);
+          }
+        }}
+      />
     </SafeAreaView>
   );
 };
@@ -47,7 +57,9 @@ const MasterDetailsTab = () => {
 const renderInfo = (label, value) => (
   <View style={styles.infoContainer}>
     <Text style={styles.labelText}>{label}</Text>
-    <TextInput style={styles.valueText} editable={false}>{value}</TextInput>
+    <TextInput style={styles.valueText} editable={false}>
+      {value}
+    </TextInput>
   </View>
 );
 

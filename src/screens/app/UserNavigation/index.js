@@ -29,14 +29,20 @@ const User = () => {
   return (
 
     <Drawer.Navigator
-      screenOptions={{
-        drawerStyle: {
-          backgroundColor: colors.skyblue,
-          paddingBottom: 10,
-          paddingTop: 20,
-          borderWidth: 1,
-        },
-      }}
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: colors.skyblue,
+        borderWidth:2,
+        borderColor:colors.skyblue,
+      },
+      headerTintColor: colors.white,
+      drawerStyle: {
+        color:colors.white,
+        backgroundColor: colors.skyblue,
+        paddingBottom: 10,
+        paddingTop: 20,
+      },
+    }}
     >
       <Drawer.Screen
         name="HRMS Dashboad"
@@ -46,18 +52,6 @@ const User = () => {
           drawerLabelStyle: { color: colors.white },
           drawerIcon: ({ size }) => (
             <Icon style={styles.picon} name="user" color={colors.midgrey} size={size} />
-          ),
-        }}
-      />
-
-      <Drawer.Screen
-        name="my Profile"
-        component={Profile}
-        options={{
-          drawerLabel: 'My Profile',
-          drawerLabelStyle: { color: colors.white },
-          drawerIcon: ({ size }) => (
-            <Icon style={styles.icon} name="user" color={colors.red} size={size} />
           ),
         }}
       />

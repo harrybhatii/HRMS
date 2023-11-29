@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         color: colors.white,
         flexDirection: 'row',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        
     },
 
     text: {

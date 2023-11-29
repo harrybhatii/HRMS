@@ -15,20 +15,18 @@ const styles = StyleSheet.create({
         height: 'auto',
         width: "100%",
         paddingLeft: 20,
-
     },
     tab: {
         flexDirection: 'row',
         flex: 0,
         width: "100%",
         justifyContent: 'space-between',
-        gap: 8,
         padding: 10,
-        borderWidth: 1
+        borderBottomWidth:3,
+        borderColor:'#ddd'
     },
     text: {
-        marginRight: 10,
-
+        marginRight: 18,
     },
     tabText: {
         fontSize: 20,

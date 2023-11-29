@@ -1,38 +1,45 @@
-import { StyleSheet } from "react-native";
-import colors from "../../../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import colors from '../../../../../constants/colors';
 
 const styles = StyleSheet.create({
   container: {
-    padding: 8,
+    paddingLeft: 12,
+    justifyContent: 'space-between',
+    paddingBottom: 310,
   },
-  scrollContainer: {
-    flexGrow: 1,
-  },
-  sectionTitle: { 
+  sectionTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    color:colors.skyblue
+    color: colors.skyblue,
+    marginTop: 10,
   },
   infoContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-   color:colors.black,
-
+    color: colors.black,
+    marginTop: 5,
   },
   labelText: {
     flex: 1,
     fontSize: 14,
-    margin:2,
-    color:colors.black, 
-    borderColor: '#ccc',
+    fontWeight: '500',
+    paddingLeft: 2,
+    paddingBottom: 2,
+    height:21,
+    paddingTop: 2,
+    color: '#2B2A2A',
   },
   valueText: {
     flex: 1,
     fontSize: 14,
-    paddingLeft: 8,
-    color:colors.black,
-  },
+    paddingRight: 20,
+    fontWeight: '400',
+    color: '#6C757D',
+    height:21,
+    paddingBottom: 2,
+    paddingTop: 2,
+    maxWidth: '80%',
+  }
 });
 
 export default styles;
-

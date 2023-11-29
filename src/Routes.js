@@ -21,6 +21,7 @@ import Profile from './screens/app/Tabs/Profile';
 import Dashboard from './screens/app/Tabs/Dashboard';
 import Payslip from './screens/app/tabsScreen/Payslip';
 import MasterDetails from './screens/app/Tabs/ProfileTabs/MasterDetails';
+import QualificationData from './screens/app/Tabs/ProfileTabs/QualificationData';
 
 const Stack = createStackNavigator()
 
@@ -47,8 +48,9 @@ const Routes = () => {
       <Stack.Screen name='Shift' component={Shift} />
       <Stack.Screen name='TravelExpense' component={TravelExpense} />
       <Stack.Screen name='WorkfromHome' component={WorkFromHome} />
-      <Stack.Screen name='Drcashboard' component={Dashboard}/>
       <Stack.Screen name='Master Details' component={MasterDetails}/>
+      <Stack.Screen name='QualificationData' component={QualificationData}/>
+      <Stack.Screen name='DashboardTab' component={Dashboard}/>
     </Stack.Navigator>
   )
 }
