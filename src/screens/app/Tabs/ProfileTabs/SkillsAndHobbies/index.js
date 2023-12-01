@@ -21,8 +21,8 @@ const navigation = useNavigation();
   }
 
     return (
-      <View>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <View style={styles.header}>
+        <ScrollView horizontal>
         <TouchableOpacity style={{ marginLeft:10}} onPress={() => setActiveButton('Skills')}>
         <Text
          style={[ styles.text ,{color : activeButton === 'Skills' ? '#00ACEE' : '#929094',

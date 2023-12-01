@@ -101,5 +101,5 @@ const ProfileTab = () => {
     </View>
   );
 };
-export default ProfileTab;
+export default React.memo(ProfileTab);
 
