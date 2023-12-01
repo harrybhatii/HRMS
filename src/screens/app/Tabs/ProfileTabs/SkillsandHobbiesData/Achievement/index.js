@@ -8,9 +8,10 @@ import colors from '../../../../../../constants/colors';
 const Achievement = () => {
   const navigation = useNavigation();
 
-  const MedicalInsuranceData = [
-    { Icon: 'Icon', id: '01', PolicyNo: '1234', Plan: 'Monthly', InsuranceCompany:'Star Health', PremiumAmt:'2000' },
-    { Icon: 'Icon', id: '02', PolicyNo:'56688', Plan:'Yearly', InsuranceCompany:'ICICI Lombard', PremiumAmt:'1200' },
+  const Achievement = [
+    { Icon: 'Icon', id: '01', Name: 'Golden Award', Date: '14-02-2023', Documents:'NA', Remarks:'Demo' },
+    { Icon: 'Icon', id: '02', Name: 'Fifa Award', Date: '14-02-2022', Documents:'NA', Remarks:'Demo' },
+  
   ];
 
   const handleActionPress = (itemId) => {
@@ -26,10 +27,10 @@ const Achievement = () => {
         <Icon name="more-vert" size={25} color="#554E56" />
       </TouchableOpacity>
       <Text style={styles.cell}>{item.id}</Text>
-      <Text style={styles.polcell}>{item.PolicyNo}</Text>
-      <Text style={styles.plcell}>{item.Plan}</Text>
-      <Text style={styles.Insurcell}>{item.InsuranceCompany}</Text>
-      <Text style={styles.Premcell}>{item.PremiumAmt}</Text>
+      <Text style={styles.namecell}>{item.Name}</Text>
+      <Text style={styles.Datecell}>{item.Date}</Text>
+      <Text style={styles.Doccell}>{item.Documents}</Text>
+      <Text style={styles.remarkcell}>{item.Remarks}</Text>
     </View>
   );
 
@@ -51,17 +52,17 @@ const Achievement = () => {
 
       <ScrollView horizontal>
       <FlatList
-        data={MedicalInsuranceData}
+        data={Achievement}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
         ListHeaderComponent={() => (
           <View style={styles.headerlist}>
             <Text style={styles.headerCell}>Action</Text>
             <Text style={styles.sText}>s.No. </Text>
-            <Text style={styles.poliText}>PolicyNo </Text>
-            <Text style={styles.planText}>Plan </Text>
-            <Text style={styles.InsuranceText}>Insurance Company </Text>
-            <Text style={styles.amountText}>Premium Amount </Text>
+            <Text style={styles.NameText}>Name </Text>
+            <Text style={styles.DataText}>Date </Text>
+            <Text style={styles.DocText}>Documents</Text>
+            <Text style={styles.remarksText}>Remarks</Text>
           </View>
         )}
       />
@@ -69,6 +70,5 @@ const Achievement = () => {
     </SafeAreaView>
   );
 };
-
 
 export default React.memo(Achievement);

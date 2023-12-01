@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         gap: 8,
         alignself: 'stretch',
         borderBottomWidth:4,
-        borderBottomColor:colors.green
+        borderBottomColor:'#ddd'
     },
     text: {
         borderRadius: 40,

@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         marginRight: 15,
     },
-
     headerlist: {
         flexDirection: 'row',
         borderWidth: 1,
@@ -18,13 +17,6 @@ const styles = StyleSheet.create({
         alignself: 'stretch',
         padding: 8,
         backgroundColor: colors.lightgrey,
-
-    },
-    textAction: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginRight: 6,
     },
     actionbtn:{
         color: '#6C757D',
@@ -40,33 +32,19 @@ const styles = StyleSheet.create({
         marginRight: 10,
     },
 
-    poliText: {
+    NameText: {
         color: '#6C757D',
         fontSize: 13,
         fontWeight: '500',
         marginLeft: 15,
         marginRight: 15,
     },
-    planText: {
+    RemarksText: {
         color: '#6C757D',
         fontSize: 13,
         fontWeight: '500',
         marginLeft: 25,
         marginRight:20,
-    },
-    InsuranceText: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginLeft: 30,
-        marginRight: 25 ,
-    },
-    amountText: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginLeft: 25,
-        marginRight: 10,
     },
     dropdown:
     {
@@ -100,16 +78,7 @@ const styles = StyleSheet.create({
 
 
     },
-    container: {
-        flex: 1,
-        padding: 5,
-        backgroundColor: colors.lightgrey,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
-    },
+   
     header: {
         flexDirection: 'row',
         borderBottomWidth: 1,
@@ -132,20 +101,12 @@ const styles = StyleSheet.create({
         color:'#554E56',
         marginLeft:50,
     },
-    polcell: {
+    codecell: {
         color:'#554E56',
         marginLeft:40,
         width:130,
     },
-    plcell: {
-        color:'#554E56',
-        marginLeft:10,
-    },
-    Insurcell: {
-        color:'#554E56',
-        marginLeft:10,
-    },
-    Premcell: {
+    Remarkscell: {
         color:'#554E56',
         marginLeft:10,
     },

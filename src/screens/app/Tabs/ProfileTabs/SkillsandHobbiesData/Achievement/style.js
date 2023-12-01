@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 import colors from '../../../../../../constants/colors';
-
 const styles = StyleSheet.create({
 
     layout: {
@@ -41,34 +40,6 @@ const styles = StyleSheet.create({
         marginRight: 10,
     },
 
-    poliText: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginLeft: 15,
-        marginRight: 15,
-    },
-    planText: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginLeft: 25,
-        marginRight:20,
-    },
-    InsuranceText: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginLeft: 30,
-        marginRight: 25 ,
-    },
-    amountText: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginLeft: 25,
-        marginRight: 10,
-    },
     dropdown:
     {
         borderColor: colors.lightgrey,
@@ -98,28 +69,8 @@ const styles = StyleSheet.create({
     },
     addbtntext: {
         color: colors.white,
-
-
-    },
-    container: {
-        flex: 1,
-        padding: 5,
-        backgroundColor: colors.lightgrey,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
-    },
-    header: {
-        flexDirection: 'row',
-        borderBottomWidth: 1,
-        borderBottomColor: '#ddd',
-        paddingBottom: 10,
-
     },
     headerCell: {
-        flex: 1,
         fontWeight: 'bold',
         color: colors.midgrey,
     },
@@ -128,27 +79,54 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#ddd',
         paddingVertical: 10,
+
     },
     cell: {
         color:'#554E56',
-        marginLeft:50,
-    },
-    polcell: {
-        color:'#554E56',
         marginLeft:40,
-        width:130,
+        marginRight:15,
     },
-    plcell: {
+    namecell: {
+        color:'#554E56',
+        marginLeft:20,
+        marginRight:15,
+        width:100,
+    },
+    Datecell: {
+        color:'#554E56',
+        marginLeft:5,
+        marginRight:10,
+    },
+    remarkcell: {
         color:'#554E56',
         marginLeft:10,
     },
-    Insurcell: {
+    Doccell: {
         color:'#554E56',
-        marginLeft:10,
+        marginLeft:25,
+        marginRight:10,
+        width:120
     },
-    Premcell: {
+    NameText: {
         color:'#554E56',
         marginLeft:10,
+        marginRight:35,
+        width:60,
+    },
+    DataText: {
+        color:'#554E56',
+        marginLeft:25,
+        marginRight:25,
+    },
+    remarksText: {
+        color:'#554E56',
+        marginLeft:35,
+        marginRight:20,
+    },
+    DocText: {
+        color:'#554E56',
+        marginLeft:45,
+        marginRight:30,
     },
     actionButton: {
         alignItems: 'center',

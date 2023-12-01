@@ -22,7 +22,8 @@ const navigation = useNavigation();
 
     return (
       <View style={styles.header}>
-        <ScrollView horizontal>
+        <ScrollView>
+        <View style={{display:"flex", flexDirection:"row"}}>
         <TouchableOpacity style={{ marginLeft:10}} onPress={() => setActiveButton('Skills')}>
         <Text
          style={[ styles.text ,{color : activeButton === 'Skills' ? '#00ACEE' : '#929094',
@@ -39,8 +40,11 @@ const navigation = useNavigation();
           <Text style={[styles.text,{color: activeButton === 'Achievement' ? '#00ACEE' : '#929094' ,
             backgroundColor : activeButton === 'Achievement' ? '#D3F3FF' : '#ddd' }]} >Achievement</Text>
         </TouchableOpacity>
-        </ScrollView>
+        </View>
+        <View>
         {renderContent()}
+        </View>
+        </ScrollView>
       </View>
     );
   };

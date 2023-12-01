@@ -40,34 +40,6 @@ const styles = StyleSheet.create({
         marginRight: 10,
     },
 
-    poliText: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginLeft: 15,
-        marginRight: 15,
-    },
-    planText: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginLeft: 25,
-        marginRight:20,
-    },
-    InsuranceText: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginLeft: 30,
-        marginRight: 25 ,
-    },
-    amountText: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginLeft: 25,
-        marginRight: 10,
-    },
     dropdown:
     {
         borderColor: colors.lightgrey,
@@ -97,26 +69,8 @@ const styles = StyleSheet.create({
     },
     addbtntext: {
         color: colors.white,
-
-
     },
-    container: {
-        flex: 1,
-        padding: 5,
-        backgroundColor: colors.lightgrey,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
-    },
-    header: {
-        flexDirection: 'row',
-        borderBottomWidth: 1,
-        borderBottomColor: '#ddd',
-        paddingBottom: 10,
-
-    },
+    
     headerCell: {
         flex: 1,
         fontWeight: 'bold',
@@ -127,25 +81,48 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#ddd',
         paddingVertical: 10,
+
     },
     cell: {
         color:'#554E56',
+        marginLeft:40,
+        marginRight:15,
+    },
+    skicell: {
+        color:'#554E56',
+        marginLeft:35,
+        marginRight:45,
+    },
+    empcell: {
+        color:'#554E56',
+        marginLeft:45,
+        marginRight:55,
+    },
+    remarkcell: {
+        color:'#554E56',
+        marginLeft:45,
+    },
+    Doccell: {
+        color:'#554E56',
         marginLeft:50,
     },
-    polcell: {
+    skiText: {
         color:'#554E56',
-        marginLeft:40,
-        width:130,
+        marginLeft:20,
+        marginRight:10,
+        width:80,
     },
-    plcell: {
-        color:'#554E56',
-        marginLeft:10,
-    },
-    Insurcell: {
+    empText: {
         color:'#554E56',
         marginLeft:10,
+        marginRight:10,
     },
-    Premcell: {
+    remarksText: {
+        color:'#554E56',
+        marginLeft:10,
+        marginRight:20,
+    },
+    DocText: {
         color:'#554E56',
         marginLeft:10,
     },
