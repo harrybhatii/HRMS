@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, } from 'react-native';
+import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import DashboardTab from '../../app/Tabs/Dashboard';
 import StatusTab from '../../app/Tabs/Status';
@@ -8,14 +8,14 @@ import MessageTab from '../../app/Tabs/Message';
 import ProfileTab from '../../app/Tabs/Profile';
 
 //DrawerImports
-import Birthday from "../tabsScreen/Birthday";
-import Attendance from "../tabsScreen/Attendance";
-import Holiday from "../tabsScreen/Holiday";
-import Guidelines from "../tabsScreen/Guidelines";
-import Announcement from "../tabsScreen/Announcement";
-import Payslip from "../tabsScreen/Payslip";
-import MissedPunchAttendance from "../tabsScreen/MissedPunchAttendance";
-import Leave from "../tabsScreen/Leave";
+import Birthday from '../tabsScreen/Birthday';
+import Attendance from '../tabsScreen/Attendance';
+import Holiday from '../tabsScreen/Holiday';
+import Guidelines from '../tabsScreen/Guidelines';
+import Announcement from '../tabsScreen/Announcement';
+import Payslip from '../tabsScreen/Payslip';
+import MissedPunchAttendance from '../tabsScreen/MissedPunchAttendance';
+import Leave from '../tabsScreen/Leave';
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import colors from '../../../constants/colors';

@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     paddingBottom: 2,
     paddingTop: 2,
     maxWidth: '80%',
-  }
+  },
 });
 
 export default styles;

@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import colors from "../../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import colors from '../../../../constants/colors';
 
 const styles = StyleSheet.create({
     container: {
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: 'bold',
       marginBottom: 20,
-      color:colors.black
+      color:colors.black,
     },
     datePickerButton: {
       backgroundColor: '#3498db',
@@ -35,5 +35,5 @@ const styles = StyleSheet.create({
       textAlign: 'center',
     },
   });
- 
+
   export default styles;

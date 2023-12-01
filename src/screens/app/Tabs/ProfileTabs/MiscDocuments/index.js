@@ -3,14 +3,14 @@ import { View, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 
-const MiscDocumentsTab=()=> {
-  const navigation=useNavigation();
+const MiscDocumentsTab = ()=> {
+  const navigation = useNavigation();
 
-  const MiscData=[
+  const MiscData = [
     {Icon: ('Icon'), Id:('1') , Document:('Aadhar Card'), DocumentType:('2')},
     {Icon:('Icon'), Id:('2'), Document:('Pan Card'), DocumentType:('1')},
     {Icon:('Icon'), Id:('3'), Document:('Driveing Licence'), DocumentType:('1')},
-  ]
+  ];
 
 const handleActionPress = (itemId) => {
   // Handle the action for the specific item (e.g., navigation, API call, etc.)
@@ -31,20 +31,20 @@ const renderItem = ({ item }) => (
 );
 return (
   <SafeAreaView style={styles.layout}>
-    
+
     <View style={styles.dropdown}>
-    
-      <TouchableOpacity style={{ flexDirection: 'row', gap: 40, borderWidth: 2, color: colors.lightgrey,borderColor:'#ddd',}}>
+
+      <TouchableOpacity style={{ flexDirection: 'row', gap: 40, borderWidth: 2, color: colors.lightgrey,borderColor:'#ddd'}}>
         <Text style={styles.droptext}>All</Text>
-        <Icon name='keyboard-arrow-down' size={24} color={colors.black} />
+        <Icon name="keyboard-arrow-down" size={24} color={colors.black} />
       </TouchableOpacity>
-     
-      <TouchableOpacity onPress={() => { navigation.navigate('QualificationData') }} style={styles.addbtn}>
-        <Icon name='add' size={24} color={colors.white} />
+
+      <TouchableOpacity onPress={() => { navigation.navigate('QualificationData'); }} style={styles.addbtn}>
+        <Icon name="add" size={24} color={colors.white} />
         <Text style={styles.addbtntext}>Add</Text>
       </TouchableOpacity>
     </View>
-    
+
 
     <FlatList
       data={qualificationData}

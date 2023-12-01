@@ -11,7 +11,7 @@ const WorkExperienceTab = () => {
   const familyMembersData = [
     { id: '01', name: 'Harsh', From:'03-11-2021', To: '06-12-2021', Salary: '120000',Designation:'Developer', Supervisor:'Aditya',Experience:'2' ,document: 'NA' },
     { id: '02', name: 'Sunita', From:'08-11-2021', To: '11-12-2021', Salary: '130000',Designation:' web Developer', Supervisor:'Aadi',Experience:'2' ,document: 'N/A' },
-    
+
   ];
 
   const handleActionPress = (itemId) => {
@@ -45,11 +45,11 @@ const WorkExperienceTab = () => {
       <View style={styles.dropdown}>
         <TouchableOpacity style={{ flexDirection: 'row', gap: 40, borderWidth: 2, borderColor: '#ddd', color: colors.lightgrey }}>
           <Text style={styles.droptext}>All</Text>
-          <Icon name='keyboard-arrow-down' size={24} color={colors.black} />
+          <Icon name="keyboard-arrow-down" size={24} color={colors.black} />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => { navigation.navigate('QualificationData') }} style={styles.addbtn}>
-          <Icon name='add' size={24} color={colors.white} />
+        <TouchableOpacity onPress={() => { navigation.navigate('QualificationData'); }} style={styles.addbtn}>
+          <Icon name="add" size={24} color={colors.white} />
           <Text style={styles.addbtntext}>Add</Text>
         </TouchableOpacity>
       </View>

@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import colors from "../../../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import colors from '../../../../../constants/colors';
 
 const styles = StyleSheet.create({
 
@@ -24,13 +24,13 @@ const styles = StyleSheet.create({
         color: '#6C757D',
         fontSize: 11,
         fontWeight: '500',
-        marginRight: 8
+        marginRight: 8,
     },
     actionbtn: {
         color: '#6C757D',
         fontSize: 11,
         fontWeight: '400',
-        marginRight: 19
+        marginRight: 19,
 
     },
     sText: {
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         fontSize: 11,
         fontWeight: '500',
         marginLeft: 8,
-        marginRight: 8
+        marginRight: 8,
     },
 
     nText: {
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         fontSize: 11,
         fontWeight: '500',
         marginRight: 8,
-        marginLeft: 8
+        marginLeft: 8,
     },
     frText: {
         color: '#6C757D',
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
         fontSize: 11,
         fontWeight: '500',
         marginRight: 1,
-        width: 75
+        width: 75,
     },
 
     fText: {
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
         fontSize: 11,
         fontWeight: '500',
         marginRight: 10,
-        width: 65
+        width: 65,
     },
     tText: {
         color: '#6C757D',
@@ -191,14 +191,14 @@ const styles = StyleSheet.create({
         color: '#6C757D',
         fontSize: 11,
         fontWeight: '500',
-        width: 60
+        width: 60,
     },
     docText: {
         marginLeft: 10,
         color: '#6C757D',
         fontSize: 11,
         fontWeight: '500',
-        width: 70
+        width: 70,
     },
     desiText: {
         marginLeft: 10,
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
         color: '#6C757D',
         fontSize: 11,
         fontWeight: '500',
-        width: 70
+        width: 70,
     },
     exText : {
         marginLeft: 30,
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
         color: '#6C757D',
         fontSize: 11,
         fontWeight: '500',
-        width: 50
+        width: 50,
     },
 
     actionButton: {

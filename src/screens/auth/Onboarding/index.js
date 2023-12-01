@@ -13,7 +13,7 @@ const Onboarding = ({ navigation }) => {
             <View style={{ flex: 1 }}>
                 <Image
                     style={styles.image}
-                    source={require('../../../assets/LPAst.png')}
+                    source={require('../../../assets/HRMSlogo.png')}
                 />
                 <View style={styles.footer} />
             </View>

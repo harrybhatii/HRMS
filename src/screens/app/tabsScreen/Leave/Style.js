@@ -1,16 +1,16 @@
-import { StyleSheet } from "react-native";
-import colors from "../../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import colors from '../../../../constants/colors';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 16,
-      backgroundColor:colors.lightgrey
+      backgroundColor:colors.lightgrey,
     },
     header: {
       fontSize: 24,
       fontWeight: 'bold',
       marginBottom: 16,
-      color:colors.black
+      color:colors.black,
     },
     leaveItem: {
       borderBottomWidth: 1,
@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
     leaveEmployee: {
       fontSize: 18,
       fontWeight: 'bold',
-      backgroundColor:colors.grey
-  
+      backgroundColor:colors.grey,
+
     },
     leaveDates: {
       color: '#555',

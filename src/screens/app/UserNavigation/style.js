@@ -1,15 +1,15 @@
-import { StyleSheet } from "react-native";
-import colors from "../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import colors from '../../../constants/colors';
 
 const styles = StyleSheet.create({
-    picon: { 
+    picon: {
     borderRadius:100,
-    borderWidth:1, 
+    borderWidth:1,
     fontSize:50,
-    marginBottom:20, 
+    marginBottom:20,
     paddingLeft:8,
-    paddingRight:8 , 
-    backgroundColor:colors.white
+    paddingRight:8 ,
+    backgroundColor:colors.white,
 },
 icon:{
     backgroundColor:colors.white,
@@ -20,8 +20,8 @@ icon:{
     paddingLeft:6,
     paddingRight:6,
     paddingBottom:3,
-    paddingTop:3
+    paddingTop:3,
 
-}
+},
 });
 export default styles;

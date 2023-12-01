@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import colors from "../../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import colors from '../../../../constants/colors';
 
 
 
@@ -13,17 +13,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: colors.skyblue,
         height: 'auto',
-        width: "100%",
+        width: '100%',
         paddingLeft: 20,
     },
     tab: {
         flexDirection: 'row',
         flex: 0,
-        width: "100%",
+        width: '100%',
         justifyContent: 'space-between',
         padding: 10,
         borderBottomWidth:3,
-        borderColor:'#ddd'
+        borderColor:'#ddd',
     },
     text: {
         marginRight: 18,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         marginRight: 10,
         height: 24,
         width: 24,
-    }
+    },
 
 
 

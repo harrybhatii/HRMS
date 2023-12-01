@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     alignItems: 'center',
     marginTop: 5,
-    
+
   },
 });
 

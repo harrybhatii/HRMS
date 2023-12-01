@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import colors from "../../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import colors from '../../../../constants/colors';
 const styles = StyleSheet.create({
     statusbar:{
     backgroundColor:colors.white,
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     taOpasity:{
         backgroundColor:colors.midgrey,
         flex:0.5,
-        
-    }
+
+    },
 });
 export default styles;

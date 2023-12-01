@@ -4,7 +4,7 @@ import colors from '../../../../constants/colors';
 const styles = StyleSheet.create({
     container: {
         height: 570,
-        backgroundColor: colors.lightgrey
+        backgroundColor: colors.lightgrey,
     },
 
     profileData: {
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         paddingLeft: 15,
         marginLeft: 10,
-        
+
 
     },
     row: {
@@ -40,15 +40,15 @@ const styles = StyleSheet.create({
         color: colors.white,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        
+
     },
 
     text: {
         fontSize: 20,
-        fontWeight: "800",
+        fontWeight: '800',
         textAlign:'center',
         color:colors.white,
-        
+
     },
 
     topbar: {

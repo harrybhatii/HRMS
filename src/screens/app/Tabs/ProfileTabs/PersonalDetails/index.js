@@ -53,7 +53,7 @@ const PersonalDetailsTab = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-    
+
       <FlatList
         data={data}
         keyExtractor={(item, index) => index.toString()}

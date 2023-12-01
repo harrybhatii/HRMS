@@ -6,15 +6,15 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor:colors.lightgrey,
       justifyContent: 'center',
-      alignItems:'center'
+      alignItems:'center',
     },
     title: {
       fontSize: 24,
       marginBottom: 30,
       borderWidth:2,
       color:colors.black,
-      backgroundColor:colors.lightgrey
-      
+      backgroundColor:colors.lightgrey,
+
     },
     button: {
       backgroundColor: '#3498db',
@@ -29,21 +29,21 @@ const styles = StyleSheet.create({
       fontSize: 18,
     },
     box:{
-      
+
       backgroundColor:colors.yellow,
       height:'50%',
-      width:"80%",
+      width:'80%',
       justifyContent: 'center',
       alignItems: 'center',
       borderWidth:2,
-      borderRadius:50
+      borderRadius:50,
     },
     Text:{
       fontSize:45,
       color:colors.black,
       marginBottom:60,
-      backgroundColor:colors.yellow
-    }
+      backgroundColor:colors.yellow,
+    },
   });
-  
+
 export default styles;

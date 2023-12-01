@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { SafeAreaView, Text, View } from "react-native";
-import Button from "../../../Components/Button";
-import styles from "./style";
-import Title from "../../../Components/Title";
-import Input from "../../../Components/Input";
-import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
+import React, { useState } from 'react';
+import { SafeAreaView, Text, View } from 'react-native';
+import Button from '../../../Components/Button';
+import styles from './style';
+import Title from '../../../Components/Title';
+import Input from '../../../Components/Input';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
@@ -22,19 +22,19 @@ const Login = ({navigation}) => {
                 <Text style={styles.text}>Login and get started</Text>
 
                 <Text style={styles.textplace}>
-                    Email 
+                    Email
                     <Text style={styles.star} > *</Text>
                 </Text>
-                <Input placeholder="Email" keyboardType="email-address" /> 
+                <Input placeholder="Email" keyboardType="email-address" />
 
                 <Text style={styles.textplace}>
-                    Client ID 
+                    Client ID
                     <Text style={styles.star} > *</Text>
                 </Text>
                 <Input placeholder="Client ID"/>
-                
+
                 <Text style={styles.textplace}>
-                    Password 
+                    Password
                     <Text style={styles.star} > *</Text>
                 </Text>
                 <View style={styles.passwordContainer}>

@@ -34,20 +34,20 @@ const QualificationTab = () => {
 
   return (
     <SafeAreaView style={styles.layout}>
-      
+
       <View style={styles.dropdown}>
-      
-        <TouchableOpacity style={{ flexDirection: 'row', gap: 40, borderWidth: 2, color: colors.lightgrey,borderColor:'#ddd',}}>
+
+        <TouchableOpacity style={{ flexDirection: 'row', gap: 40, borderWidth: 2, color: colors.lightgrey,borderColor:'#ddd'}}>
           <Text style={styles.droptext}>All</Text>
-          <Icon name='keyboard-arrow-down' size={24} color={colors.black} />
+          <Icon name="keyboard-arrow-down" size={24} color={colors.black} />
         </TouchableOpacity>
-       
-        <TouchableOpacity onPress={() => { navigation.navigate('QualificationData') }} style={styles.addbtn}>
-          <Icon name='add' size={24} color={colors.white} />
+
+        <TouchableOpacity onPress={() => { navigation.navigate('QualificationData'); }} style={styles.addbtn}>
+          <Icon name="add" size={24} color={colors.white} />
           <Text style={styles.addbtntext}>Add</Text>
         </TouchableOpacity>
       </View>
-      
+
 
       <FlatList
         data={qualificationData}

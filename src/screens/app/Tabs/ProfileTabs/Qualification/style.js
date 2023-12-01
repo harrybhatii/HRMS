@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import colors from "../../../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import colors from '../../../../../constants/colors';
 
 const styles = StyleSheet.create({
 
@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         flexdirection: 'column',
         alignitems: 'flexstart',
         marginLeft: 15,
-        marginRight: 15
+        marginRight: 15,
     },
 
     headerlist: {
@@ -18,42 +18,42 @@ const styles = StyleSheet.create({
         alignitems: 'center',
         alignself: 'stretch',
         padding: 8,
-        backgroundColor: colors.lightgrey
+        backgroundColor: colors.lightgrey,
 
     },
     textAction: {
         color: '#6C757D',
         fontSize: 13,
         fontWeight: '500',
-        marginRight: 6
+        marginRight: 6,
     },
     actionbtn:{
         color: '#6C757D',
         fontSize: 13,
         fontWeight: '500',
-        marginRight: 10
+        marginRight: 10,
     },
     sText: {
         color: '#6C757D',
         fontSize: 13,
         fontWeight: '500',
         marginLeft: 5,
-        marginRight: 10
+        marginRight: 10,
     },
-    
+
     QualiText: {
         color: '#6C757D',
         fontSize: 13,
         fontWeight: '500',
         marginLeft: 8,
-        marginRight: 30
+        marginRight: 30,
     },
     marksText: {
         color: '#6C757D',
         fontSize: 13,
         fontWeight: '500',
         marginLeft: 30,
-        marginRight: 10
+        marginRight: 10,
     },
     dropdown:
     {
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         gap: 190,
         alignItems: 'center',
-    
+
     },
     droptext: {
         color: colors.midgrey,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 5,
-        backgroundColor: colors.lightgrey
+        backgroundColor: colors.lightgrey,
     },
     title: {
         fontSize: 24,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#ddd',
         paddingBottom: 10,
-       
+
     },
     headerCell: {
         flex: 1,
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     Qcell: {
         color:'#554E56',
         marginLeft:40,
-        width:130
+        width:130,
     },
     mcell: {
         color:'#554E56',

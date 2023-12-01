@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StatusBar, TouchableOpacity, PermissionsAndroid, } from 'react-native';
+import { View, Text, StatusBar, TouchableOpacity, PermissionsAndroid } from 'react-native';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import styles from './style';
 
@@ -37,15 +37,13 @@ const selfie = () => {
             <View style={styles.camera}>
                 <TouchableOpacity
                     onPress={() => {
-                       requestCameraPermission();   
+                       requestCameraPermission();
                     }}
-                    style={styles.taOpasity}>
-
-                </TouchableOpacity>
+                    style={styles.taOpasity} />
             </View>
         </View>
     );
-}
+};
 
 
 export default React.memo(selfie);

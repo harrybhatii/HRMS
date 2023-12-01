@@ -41,11 +41,11 @@ const Family = () => {
       <View style={styles.dropdown}>
         <TouchableOpacity style={{ flexDirection: 'row', gap: 40, borderWidth: 2, borderColor: '#ddd', color: colors.lightgrey }}>
           <Text style={styles.droptext}>All</Text>
-          <Icon name='keyboard-arrow-down' size={24} color={colors.black} />
+          <Icon name="keyboard-arrow-down" size={24} color={colors.black} />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => { navigation.navigate('QualificationData') }} style={styles.addbtn}>
-          <Icon name='add' size={24} color={colors.white} />
+        <TouchableOpacity onPress={() => { navigation.navigate('QualificationData'); }} style={styles.addbtn}>
+          <Icon name="add" size={24} color={colors.white} />
           <Text style={styles.addbtntext}>Add</Text>
         </TouchableOpacity>
       </View>

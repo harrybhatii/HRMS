@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 
-const MessageTab=()=>{
-    return(
+const MessageTab = ()=>{
+    return (
       <View>
-        <Text style={{color:"black"}}>Message</Text>
+        <Text style={{color:'black'}}>Message</Text>
       </View>
-    )
+    );
   };
-  
-export default React.memo(MessageTab); 
+
+export default React.memo(MessageTab);

@@ -1,19 +1,19 @@
-import { StyleSheet } from "react-native";
-import colors from "../../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import colors from '../../../../constants/colors';
 
-const styles= StyleSheet.create({
-   
+const styles = StyleSheet.create({
+
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 16,
-        backgroundColor:colors.blackg
+        backgroundColor:colors.blackg,
       },
       status: {
         fontSize: 20,
         marginBottom: 24,
-        backgroundColor:colors.grey
+        backgroundColor:colors.grey,
       },
       button: {
         marginTop: 16,

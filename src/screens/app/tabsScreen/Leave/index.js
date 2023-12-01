@@ -9,10 +9,10 @@ const Leave = () => {
 
     { id: '3', employee: 'Harsh bhati', startDate: '2023-11-15', endDate: '2023-11-20' },
     { id: '4', employee: 'Aditya Bhatt', startDate: '2023-12-01', endDate: '2023-12-05' },
-  
+
     { id: '5', employee: 'Harsh bhati', startDate: '2023-11-15', endDate: '2023-11-20' },
     { id: '6', employee: 'Aditya Bhatt', startDate: '2023-12-01', endDate: '2023-12-05' },
-    
+
   ];
 
   return (

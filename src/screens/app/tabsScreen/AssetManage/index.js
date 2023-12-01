@@ -36,23 +36,23 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
-    color:colors.black
+    color:colors.black,
   },
   assetItem: {
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
     paddingVertical: 12,
-   
+
   },
   assetName: {
     fontSize: 18,
     fontWeight: 'bold',
-    color:colors.black
+    color:colors.black,
   },
   assetQuantity: {
     color: '#555',
-    
-    
+
+
   },
 });
 
