@@ -22,6 +22,9 @@ import Dashboard from './screens/app/Tabs/Dashboard';
 import Payslip from './screens/app/tabsScreen/Payslip';
 import MasterDetails from './screens/app/Tabs/ProfileTabs/MasterDetails';
 import QualificationData from './screens/app/Tabs/ProfileTabs/QualificationData';
+import Skills from './screens/app/Tabs/ProfileTabs/SkillsandHobbiesData/Skills';
+import Hobbies from './screens/app/Tabs/ProfileTabs/SkillsandHobbiesData/Hobbies';
+import Achievement from './screens/app/Tabs/ProfileTabs/SkillsandHobbiesData/Achievement';
 
 const Stack = createStackNavigator()
 
@@ -51,6 +54,9 @@ const Routes = () => {
       <Stack.Screen name='Master Details' component={MasterDetails}/>
       <Stack.Screen name='QualificationData' component={QualificationData}/>
       <Stack.Screen name='DashboardTab' component={Dashboard}/>
+      <Stack.Screen name='Skills' component={Skills}/>
+      <Stack.Screen name='Hobbies' component={Hobbies}/>
+      <Stack.Screen name='Achievement' component={Achievement}/>
     </Stack.Navigator>
   )
 }

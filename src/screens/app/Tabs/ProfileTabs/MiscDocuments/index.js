@@ -1,6 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import styles from './style';
+import colors from '../../../../../constants/colors';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 
 const MiscDocumentsTab = ()=> {
@@ -9,11 +12,10 @@ const MiscDocumentsTab = ()=> {
   const MiscData = [
     {Icon: ('Icon'), Id:('1') , Document:('Aadhar Card'), DocumentType:('2')},
     {Icon:('Icon'), Id:('2'), Document:('Pan Card'), DocumentType:('1')},
-    {Icon:('Icon'), Id:('3'), Document:('Driveing Licence'), DocumentType:('1')},
+    {Icon:('Icon'), Id:('3'), Document:('Driveing Licence'), DocumentType:('3')},
   ];
 
 const handleActionPress = (itemId) => {
-  // Handle the action for the specific item (e.g., navigation, API call, etc.)
   console.log(`Action pressed for item with id ${itemId}`);
 };
 const renderItem = ({ item }) => (
@@ -47,7 +49,7 @@ return (
 
 
     <FlatList
-      data={qualificationData}
+      data={MiscData}
       keyExtractor={(item) => item.id}
       renderItem={renderItem}
       ListHeaderComponent={() => (

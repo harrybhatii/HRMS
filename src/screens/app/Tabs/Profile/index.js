@@ -59,8 +59,7 @@ const ProfileTab = () => {
           
         </Text>
       </View>
-         <View style={styles.tab}>
-         
+         <View style={styles.tab}>  
          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <TouchableOpacity style={styles.text} onPress={() => setActiveButton('Master Details')}>
         <Text style={[ styles.tabText,{color: activeButton === 'Master Details' ? '#00ACEE' : '#929094' },]}>Master Details</Text>

@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const AchievementData = () => {
+const Skills = () => {
   return (
     <View>
-      <Text>AchievementData</Text>
+      <Text>SkillData</Text>
     </View>
   );
 };
 
-export default React.memo(AchievementData);
+export default React.memo(Skills);

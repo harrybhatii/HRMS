@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, FlatList } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, FlatList, ScrollView } from 'react-native';
 import styles from './style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
@@ -8,13 +8,12 @@ import colors from '../../../../../constants/colors';
 const MedicalInsuranceTab = () => {
   const navigation = useNavigation();
 
-  const qualificationData = [
+  const MedicalInsuranceData = [
     { Icon: 'Icon', id: '01', PolicyNo: '1234', Plan: 'Monthly', InsuranceCompany:'Star Health', PremiumAmt:'2000' },
     { Icon: 'Icon', id: '02', PolicyNo:'56688', Plan:'Yearly', InsuranceCompany:'ICICI Lombard', PremiumAmt:'1200' },
   ];
 
   const handleActionPress = (itemId) => {
-    // Handle the action for the specific item (e.g., navigation, API call, etc.)
     console.log(`Action pressed for item with id ${itemId}`);
   };
 
@@ -30,7 +29,7 @@ const MedicalInsuranceTab = () => {
       <Text style={styles.polcell}>{item.PolicyNo}</Text>
       <Text style={styles.plcell}>{item.Plan}</Text>
       <Text style={styles.Insurcell}>{item.InsuranceCompany}</Text>
-      <Text style={styles.Premcell}>{PremiumAmt}</Text>
+      <Text style={styles.Premcell}>{item.PremiumAmt}</Text>
     </View>
   );
 
@@ -50,9 +49,9 @@ const MedicalInsuranceTab = () => {
         </TouchableOpacity>
       </View>
 
-
+      <ScrollView horizontal>
       <FlatList
-        data={qualificationData}
+        data={MedicalInsuranceData}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
         ListHeaderComponent={() => (
@@ -66,6 +65,7 @@ const MedicalInsuranceTab = () => {
           </View>
         )}
       />
+      </ScrollView>
     </SafeAreaView>
   );
 };
