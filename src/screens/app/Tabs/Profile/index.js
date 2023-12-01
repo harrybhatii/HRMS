@@ -54,9 +54,7 @@ const ProfileTab = () => {
           <Icon name="arrow-left" size={24} color={colors.white} />
         </TouchableOpacity>
         <Text style={{color:colors.white , padding:16,fontSize:20}}>
-          
-          Profile
-          
+          My Profie
         </Text>
       </View>
          <View style={styles.tab}>  

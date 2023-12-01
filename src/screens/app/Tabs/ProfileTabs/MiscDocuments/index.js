@@ -12,7 +12,6 @@ const MiscDocumentsTab = ()=> {
   const MiscData = [
     {Icon: ('Icon'), Id:('1') , Document:('Aadhar Card'), DocumentType:('2')},
     {Icon:('Icon'), Id:('2'), Document:('Pan Card'), DocumentType:('1')},
-    {Icon:('Icon'), Id:('3'), Document:('Driveing Licence'), DocumentType:('3')},
   ];
 
 const handleActionPress = (itemId) => {

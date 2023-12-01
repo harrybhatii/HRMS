@@ -3,14 +3,16 @@ import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import Achievement from '../SkillsandHobbiesData/Achievement';
 import Hobbies from '../SkillsandHobbiesData/Hobbies';
 import Skills from '../SkillsandHobbiesData/Skills';
+import { useNavigation } from '@react-navigation/native';
+import styles from './style';
 
 const SkillsAndHobbiesTab = () =>{
-
-  const[activeButton, setActiveButton]=useState('SkillsData')
+const navigation = useNavigation();
+  const[activeButton, setActiveButton]=useState('Skills')
 
 
   const renderContent = () => {
-    if (activeButton === "skills") {
+    if (activeButton === "Skills") {
       return <Skills/>
     }else if(activeButton === "Hobbies"){
       return <Hobbies/>
@@ -20,11 +22,25 @@ const SkillsAndHobbiesTab = () =>{
 
     return (
       <View>
-        <ScrollView horizontal>
-          <TouchableOpacity>
-            
-          </TouchableOpacity>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <TouchableOpacity style={{ marginLeft:10}} onPress={() => setActiveButton('Skills')}>
+        <Text
+         style={[ styles.text ,{color : activeButton === 'Skills' ? '#00ACEE' : '#929094',
+         backgroundColor : activeButton === 'Skills' ? '#D3F3FF' : '#ddd' },]}>Skills</Text>  
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={{marginLeft:10}}  onPress={() => setActiveButton('Hobbies')}>
+          <Text 
+          style={[ styles.text,{color : activeButton === 'Hobbies' ? '#00ACEE' : '#929094' ,  
+          backgroundColor : activeButton === 'Hobbies' ? '#D3F3FF' : '#ddd' },]}>Hobbies</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={{marginLeft:10}}  onPress={()=> setActiveButton('Achievement')}>
+          <Text style={[styles.text,{color: activeButton === 'Achievement' ? '#00ACEE' : '#929094' ,
+            backgroundColor : activeButton === 'Achievement' ? '#D3F3FF' : '#ddd' }]} >Achievement</Text>
+        </TouchableOpacity>
         </ScrollView>
+        {renderContent()}
       </View>
     );
   };
