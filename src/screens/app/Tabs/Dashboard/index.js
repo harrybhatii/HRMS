@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, SafeAreaView, ScrollView, Text } from 'react-native';
+import { View, SafeAreaView, ScrollView, Text, Image } from 'react-native';
 import styles from "./style";
 import AttractionCard from '../../../../Components/AttractionCard';
 import colors from '../../../../constants/colors';
@@ -15,7 +15,11 @@ const DashboardTab = () => {
       <ScrollView> 
         <View style={{backgroundColor:colors.skyblue}} >
           <View style={styles.profiletab}>
-            <Icon style={{borderWidth:1,borderRadius:100, backgroundColor:colors.white}} name='person' size={60} color={colors.red}  />
+            <Image 
+            style={styles.profileimage}  
+            source={require('../../../../assets/profilephoto.png')}
+            />
+            <View style={{flexDirection:'column',borderRightWidth:2,borderRightColor:'#ddd',paddingLeft:10,height:"100%"}}/>
             <View style={styles.profileData}>
               <Text style={styles.userInfo}>User Name= Ritesh </Text>
               <Text style={styles.userInfo}>User ID= 1234567</Text>

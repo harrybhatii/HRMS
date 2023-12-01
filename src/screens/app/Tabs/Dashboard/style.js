@@ -9,12 +9,18 @@ const styles = StyleSheet.create({
 
     profileData: {
         fontSize: 30,
-        color: '#000000',
         marginTop: 10,
-        paddingLeft: 15,
-        marginLeft: 10,
-
-
+        paddingLeft: 5,
+        marginLeft:10,
+        borderleftWidth:2,
+        borderLeftColor:'#ddd',
+    },
+    profileimage: {
+        borderWidth: 1,
+        borderRadius: 100,
+        backgroundColor: colors.white,
+        height: 70,
+        width: 70,
     },
     row: {
         flexDirection: 'row',
@@ -31,7 +37,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginBottom: 70,
         marginTop: 70,
-        backgroundColor:colors.skyblue,
+        backgroundColor: colors.skyblue,
 
     },
     userInfo: {
@@ -46,17 +52,17 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 20,
         fontWeight: '800',
-        textAlign:'center',
-        color:colors.white,
+        textAlign: 'center',
+        color: colors.white,
 
     },
 
     topbar: {
         backgroundColor: colors.skyblue,
         verticalAlign: 'middle',
-        height:0,
-        flex:1,
-        flexDirection:'row',
+        height: 0,
+        flex: 1,
+        flexDirection: 'row',
     },
 
 });

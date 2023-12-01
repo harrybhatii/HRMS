@@ -5,7 +5,7 @@ import colors from "../../../constants/colors";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.white,
+        backgroundColor: colors.sky,
     },
     image: {
         width: '100%',
@@ -26,12 +26,12 @@ const styles = StyleSheet.create({
     content: {
         padding: 46,
         paddingTop: 0,
-        backgroundColor: colors.white,
+        backgroundColor: colors.skyblue,
 
 
     },
     footer: {
-        backgroundColor: colors.white,
+        backgroundColor: colors.skyblue,
         height: 60,
         width: '100%',
         borderTopRightRadius: 30,
@@ -41,9 +41,9 @@ const styles = StyleSheet.create({
     },
     text: {
         textAlign: 'center',
-        marginBottom: 10,
         color:colors.midgrey,
-        fontWeight:'900'
+        fontWeight:'900',
+        backgroundColor:colors.skyblue
     },
     head: {
         color: colors.green,
