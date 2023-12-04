@@ -41,14 +41,14 @@ const styles = StyleSheet.create({
         marginRight: 10,
     },
 
-    QualiText: {
+    docText: {
         color: '#6C757D',
         fontSize: 13,
         fontWeight: '500',
         marginLeft: 8,
         marginRight: 30,
     },
-    marksText: {
+    doctText: {
         color: '#6C757D',
         fontSize: 13,
         fontWeight: '500',
@@ -80,22 +80,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingLeft: 10,
         borderRadius: 4,
-
     },
     addbtntext: {
         color: colors.white,
-
-
-    },
-    container: {
-        flex: 1,
-        padding: 5,
-        backgroundColor: colors.lightgrey,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
     },
     header: {
         flexDirection: 'row',
@@ -119,12 +106,12 @@ const styles = StyleSheet.create({
         color:'#554E56',
         marginLeft:50,
     },
-    Qcell: {
+    Doccell: {
         color:'#554E56',
         marginLeft:40,
         width:130,
     },
-    mcell: {
+    doctcell: {
         color:'#554E56',
         marginLeft:10,
     },

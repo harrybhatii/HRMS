@@ -9,25 +9,17 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         marginRight: 15,
     },
-
     headerlist: {
         flexDirection: 'row',
         borderWidth: 1,
-        borderColor:'#ddd',
+        borderColor: '#ddd',
         display: 'flex',
         alignitems: 'center',
         alignself: 'stretch',
         padding: 8,
         backgroundColor: colors.lightgrey,
-
     },
-    textAction: {
-        color: '#6C757D',
-        fontSize: 13,
-        fontWeight: '500',
-        marginRight: 6,
-    },
-    actionbtn:{
+    actionbtn: {
         color: '#6C757D',
         fontSize: 13,
         fontWeight: '500',
@@ -38,9 +30,8 @@ const styles = StyleSheet.create({
         fontSize: 13,
         fontWeight: '500',
         marginLeft: 5,
-        marginRight: 10,
+        marginRight: 25,
     },
-
     QualiText: {
         color: '#6C757D',
         fontSize: 13,
@@ -64,7 +55,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         gap: 190,
         alignItems: 'center',
-
     },
     droptext: {
         color: colors.midgrey,
@@ -84,25 +74,11 @@ const styles = StyleSheet.create({
     },
     addbtntext: {
         color: colors.white,
-
-
     },
     container: {
         flex: 1,
         padding: 5,
         backgroundColor: colors.lightgrey,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
-    },
-    header: {
-        flexDirection: 'row',
-        borderBottomWidth: 1,
-        borderBottomColor: '#ddd',
-        paddingBottom: 10,
-
     },
     headerCell: {
         flex: 1,
@@ -116,22 +92,22 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
     },
     cell: {
-        color:'#554E56',
-        marginLeft:50,
+        color: '#554E56',
+        marginLeft: 50,
     },
     Qcell: {
-        color:'#554E56',
-        marginLeft:40,
-        width:130,
+        color: '#554E56',
+        marginLeft: 45,
+        width: 130,
     },
     mcell: {
-        color:'#554E56',
-        marginLeft:10,
+        color: '#554E56',
+        marginLeft: 10,
     },
     actionButton: {
         alignItems: 'center',
         justifyContent: 'center',
-      },
+    },
 });
 
 export default styles;

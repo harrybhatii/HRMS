@@ -3,39 +3,43 @@ import colors from '../../../../../constants/colors';
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
-  },
-  scrollContainer: {
-    flexGrow: 1,
+    paddingLeft: 12,
+    justifyContent: 'space-between',
+    paddingBottom: 310,
   },
   sectionTitle: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
-    marginTop: 16,
-    marginBottom: 8,
-    color:colors.skyblue,
+    color: colors.skyblue,
+    marginTop: 10,
   },
   infoContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 12,
-    color:colors.black,
+    color: colors.black,
+    marginTop: 5,
   },
   labelText: {
     flex: 1,
-    fontSize: 16,
-    color:colors.black,
+    fontSize: 14,
+    fontWeight: '500',
+    paddingLeft: 2,
+    paddingBottom: 2,
+    height:21,
+    paddingTop: 2,
+    color: '#2B2A2A',
   },
   valueText: {
     flex: 1,
-    fontSize: 16,
-    paddingLeft: 8,
-    borderBottomWidth: 1,
-    borderColor: '#ccc',
-    color:colors.black,
+    fontSize: 14,
+    paddingRight: 20,
+    fontWeight: '400',
+    color: '#6C757D',
+    height:21,
+    paddingBottom: 2,
+    paddingTop: 2,
+    maxWidth: '80%',
   },
 });
 
 export default styles;
-

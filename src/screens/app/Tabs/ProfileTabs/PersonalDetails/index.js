@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, SafeAreaView, TextInput, FlatList, ScrollView } from 'react-native';
+import { View, Text, SafeAreaView, TextInput, FlatList } from 'react-native';
 import styles from './style';
 
 const PersonalDetailsTab = () => {

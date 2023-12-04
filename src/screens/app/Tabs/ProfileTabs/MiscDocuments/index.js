@@ -10,8 +10,8 @@ const MiscDocumentsTab = ()=> {
   const navigation = useNavigation();
 
   const MiscData = [
-    {Icon: ('Icon'), Id:('1') , Document:('Aadhar Card'), DocumentType:('2')},
-    {Icon:('Icon'), Id:('2'), Document:('Pan Card'), DocumentType:('1')},
+    {Icon: ('Icon'), id:('1') , Document:('Aadhar Card'), DocumentType:('2')},
+    {Icon:('Icon'), id:('2'), Document:('Pan Card'), DocumentType:('1')},
   ];
 
 const handleActionPress = (itemId) => {
@@ -26,8 +26,8 @@ const renderItem = ({ item }) => (
       <Icon name="more-vert" size={25} color="#554E56" />
     </TouchableOpacity>
     <Text style={styles.cell}>{item.id}</Text>
-    <Text style={styles.Qcell}>{item.Document}</Text>
-    <Text style={styles.mcell}>{item.DocumentType}</Text>
+    <Text style={styles.Doccell}>{item.Document}</Text>
+    <Text style={styles.doctcell}>{item.DocumentType}</Text>
   </View>
 );
 return (
@@ -54,9 +54,9 @@ return (
       ListHeaderComponent={() => (
         <View style={styles.headerlist}>
           <Text style={styles.headerCell}>Action</Text>
-          <Text style={styles.sText}>s.No. </Text>
-          <Text style={styles.QualiText}>Document </Text>
-          <Text style={styles.marksText}>DocumentType</Text>
+          <Text style={styles.sText}>s.No.</Text>
+          <Text style={styles.docText}>Document</Text>
+          <Text style={styles.doctText}>DocumentType</Text>
         </View>
       )}
     />
