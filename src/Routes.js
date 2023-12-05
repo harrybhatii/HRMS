@@ -25,6 +25,7 @@ import QualificationData from './screens/app/Tabs/ProfileTabs/QualificationData'
 import Skills from './screens/app/Tabs/ProfileTabs/SkillsandHobbiesData/Skills';
 import Hobbies from './screens/app/Tabs/ProfileTabs/SkillsandHobbiesData/Hobbies';
 import Achievement from './screens/app/Tabs/ProfileTabs/SkillsandHobbiesData/Achievement';
+import TDSDecleration from './screens/app/tabsScreen/TDSDecleration';
 
 const Stack = createStackNavigator()
 
@@ -39,15 +40,12 @@ const Routes = () => {
       <Stack.Screen name='Profile' component={Profile} />
       <Stack.Screen name='AssetManage' component={AssetManage} />
       <Stack.Screen name='Attendance' component={Attendance} />
-      <Stack.Screen name='EmployeOnbording' component={EmployeOnbording} />
       <Stack.Screen name='HrReports' component={HRReportsData} />
       <Stack.Screen name='Leave' component={Leave} />
       <Stack.Screen name='Payroll' component={Payslip} />
-      <Stack.Screen name='Performance' component={Performance} />
       <Stack.Screen name='PhotoAttendance' component={photoAttandance} />
-      <Stack.Screen name='ProjectTask' component={ProjectTask} />
       <Stack.Screen name='PunchAttendance' component={punchAttandance} />
-      <Stack.Screen name='RecruitmentHireing' component={RecruitmentHireing} />
+      <Stack.Screen name='TDSDeclaration' component={TDSDecleration} />
       <Stack.Screen name='Shift' component={Shift} />
       <Stack.Screen name='TravelExpense' component={TravelExpense} />
       <Stack.Screen name='WorkfromHome' component={WorkFromHome} />

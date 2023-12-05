@@ -46,14 +46,14 @@ const DashboardTab = () => {
                 onPress={() => navigation.navigate('WorkfromHome')}
               />
               <AttractionCard
-                title='Project task'
-                iconName="assignment"
-                onPress={() => navigation.navigate('ProjectTask')}
+                title='Punch Attendance'
+                iconName="fingerprint"
+                onPress={() => navigation.navigate('PunchAttendance')}
               />
               <AttractionCard
-                title='Performance '
-                iconName="assignment"
-                onPress={() => navigation.navigate('Performance')}
+                title='Camera Attendance '
+                iconName="camera-alt"
+                onPress={() => navigation.navigate('PhotoAttendance')}
               />
               <AttractionCard
                 title='Asset '
@@ -66,14 +66,9 @@ const DashboardTab = () => {
                 onPress={() => navigation.navigate('Shift')}
               />
               <AttractionCard
-                title='Employe On-Boarding '
-                iconName="person-add"
-                onPress={() => navigation.navigate('EmployeOnbording')}
-              />
-              <AttractionCard
-                title='Recruitment And Hiring '
-                iconName="people"
-                onPress={() => navigation.navigate('RecruitmentHireing')}
+                title='TDS Declaration'
+                iconName="description"
+                onPress={() => navigation.navigate('TDSDeclaration')}
               />
               <AttractionCard
                 title='Travel & Expense '

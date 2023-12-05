@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const ProjectTask = ()=>{
+const TDSDeclaration = ()=>{
 
     return (
       <View>
@@ -9,4 +9,4 @@ const ProjectTask = ()=>{
       </View>
     );
   };
-export default React.memo(ProjectTask);
+export default React.memo(TDSDeclaration);
