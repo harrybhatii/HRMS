@@ -17,11 +17,13 @@ import Profile from './screens/app/Tabs/Profile';
 import Dashboard from './screens/app/Tabs/Dashboard';
 import Payslip from './screens/app/tabsScreen/Payslip';
 import MasterDetails from './screens/app/Tabs/ProfileTabs/MasterDetails';
-import QualificationData from './screens/app/Tabs/ProfileTabs/QualificationData';
+import QualificationData from './screens/app/Tabs/ProfileTabs/QualificationData/DataInput';
 import Skills from './screens/app/Tabs/ProfileTabs/SkillsandHobbiesData/Skills';
 import Hobbies from './screens/app/Tabs/ProfileTabs/SkillsandHobbiesData/Hobbies';
 import Achievement from './screens/app/Tabs/ProfileTabs/SkillsandHobbiesData/Achievement';
 import TDSDecleration from './screens/app/tabsScreen/TDSDecleration';
+import data from './screens/app/Tabs/ProfileTabs/QualificationData/Data/data';
+import FamilyDataInput from './screens/app/Tabs/ProfileTabs/familyMembersdata/FamilyDataInput';
 
 const Stack = createStackNavigator()
 
@@ -51,6 +53,8 @@ const Routes = () => {
       <Stack.Screen name='Skills' component={Skills}/>
       <Stack.Screen name='Hobbies' component={Hobbies}/>
       <Stack.Screen name='Achievement' component={Achievement}/>
+      <Stack.Screen name='Data' component={data}/>
+      <Stack.Screen name='FamilyData' component={FamilyDataInput}/>
     </Stack.Navigator>
   )
 }

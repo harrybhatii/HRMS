@@ -44,7 +44,7 @@ const Family = () => {
           <Icon name="keyboard-arrow-down" size={24} color={colors.black} />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => { navigation.navigate('QualificationData'); }} style={styles.addbtn}>
+        <TouchableOpacity onPress={() => { navigation.navigate('FamilyData'); }} style={styles.addbtn}>
           <Icon name="add" size={24} color={colors.white} />
           <Text style={styles.addbtntext}>Add</Text>
         </TouchableOpacity>
