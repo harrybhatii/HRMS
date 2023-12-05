@@ -6,14 +6,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
         padding: 16,
-        backgroundColor:colors.blackg,
+        backgroundColor:colors.white,
       },
       status: {
+        textAlign:'center',
         fontSize: 20,
         marginBottom: 24,
-        backgroundColor:colors.grey,
+        backgroundColor:colors.midgrey,
       },
       button: {
         marginTop: 16,

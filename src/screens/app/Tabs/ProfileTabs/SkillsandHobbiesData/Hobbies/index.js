@@ -26,7 +26,7 @@ const Hobbies = () => {
         <Icon name="more-vert" size={25} color="#554E56" />
       </TouchableOpacity>
       <Text style={styles.cell}>{item.id}</Text>
-      <Text style={styles.codecell}>{item.Codeing}</Text>
+      <Text style={styles.codecell}>{item.Name}</Text>
       <Text style={styles.Remarkscell}>{item.Remarks}</Text>
     </View>
   );

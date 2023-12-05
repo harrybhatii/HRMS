@@ -9,12 +9,10 @@ const styles = StyleSheet.create({
 
     profileData: {
         fontSize: 30,
-        marginTop: 10,
         paddingLeft: 5,
         marginLeft:10,
-        borderleftWidth:2,
-        borderLeftColor:'#ddd',
     },
+    
     profileimage: {
         borderWidth: 1,
         borderRadius: 100,
@@ -35,8 +33,8 @@ const styles = StyleSheet.create({
         paddingRight: 30,
         paddingLeft: 30,
         flexDirection: 'row',
-        marginBottom: 70,
-        marginTop: 70,
+        marginBottom: 40,
+        marginTop: 40,
         backgroundColor: colors.skyblue,
 
     },

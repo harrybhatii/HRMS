@@ -1,12 +1,12 @@
-import React from 'react';
-import { View, Text, StatusBar, TouchableOpacity, PermissionsAndroid } from 'react-native';
-import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import React, { useCallback, useState } from 'react';
+import { View, Button, TouchableOpacity, PermissionsAndroid } from 'react-native';
+import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
 import styles from './style';
 
-const selfie = () => {
+const Selfie = () => {
+    const [isCameraOpen, setCameraOpen] = useState(false);
 
-
-    const requestCameraPermission = async () => {
+    const requestCameraPermission = useCallback(async () => {
         try {
             const granted = await PermissionsAndroid.request(
                 PermissionsAndroid.PERMISSIONS.CAMERA,
@@ -28,22 +28,41 @@ const selfie = () => {
         } catch (err) {
             console.warn(err);
         }
+    }, []);
+
+    const toggleCamera = () => {
+        setCameraOpen(prevState => !prevState);
+        if (!isCameraOpen) {
+            requestCameraPermission();
+        }
+    };
+
+    const openCamera = () => {
+        if (isCameraOpen) {
+            launchCamera({ mediaType: 'photo' }, () => {
+                // Handle the result if needed
+            });
+        }
     };
 
     return (
         <View style={styles.statusbar}>
-
-            <Text style={styles.cameratxt}> Take A Selfie </Text>
             <View style={styles.camera}>
                 <TouchableOpacity
                     onPress={() => {
-                       requestCameraPermission();
+                        toggleCamera();
+                        openCamera();
                     }}
-                    style={styles.taOpasity} />
+                    style={styles.taOpasity}
+                />
             </View>
+            <Button
+                title={isCameraOpen ? 'Turn Off Camera' : 'Turn On Camera'}
+                onPress={toggleCamera}
+            />
+            <Button title="Punch Attendance" onPress={() => { /* Handle punch attendance */ }} />
         </View>
     );
 };
 
-
-export default React.memo(selfie);
+export default React.memo(Selfie);

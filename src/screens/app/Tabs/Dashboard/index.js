@@ -23,6 +23,8 @@ const DashboardTab = () => {
             <View style={styles.profileData}>
               <Text style={styles.userInfo}>User Name= Ritesh </Text>
               <Text style={styles.userInfo}>User ID= 1234567</Text>
+              <Text style={styles.userInfo}>Branch= Noida</Text>
+              <Text style={styles.userInfo}>Department= Accounts</Text>
             </View>
           </View>
 
