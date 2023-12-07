@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { SafeAreaView, Text, TouchableWithoutFeedback, View, Checkbox } from 'react-native';
+import { SafeAreaView, Text, TouchableWithoutFeedback, View,  } from 'react-native';
 import styles from './style';
 import Input from '../../../../../../Components/Input';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import DocumentPicker from 'react-native-document-picker';
+import { Checkbox } from 'react-native-paper';
 
 
 
@@ -11,6 +12,12 @@ import DocumentPicker from 'react-native-document-picker';
 const FamilyDataInput = ({ navigation }) => {
   const [selectedDocument, setSelectedDocument] = useState(null);
   const [isSelected, setSelection] = useState(false);
+  const [graduityNominee, setGraduityNominee] = useState(false);
+  const [pfNominee, setPFNominator] = useState(false);
+  const [pensionNominee, setPensionNominee] = useState(false);
+  const [esicNominee, setESICNominee] = useState(false);
+  const [medicalInsurance, setMedicalInsurance] = useState(false);
+  const [medicalInsuranceNominee, setMedicalInsuranceNominee] = useState(false);
 
   const SelectDoc = async () => {
     try {
@@ -111,20 +118,6 @@ const FamilyDataInput = ({ navigation }) => {
             />
           </View>
 
-          <View style={{ flex: 1, flexDirection: 'row', }}>
-            <View style={styles.container}>
-              <View style={styles.checkboxContainer}>
-                <Checkbox
-                  value={isSelected}
-                  onValueChange={setSelection}
-                  style={styles.checkbox}
-                />
-                <Text style={styles.label}>Do you like React Native?</Text>
-              </View>
-              <Text>Is CheckBox selected: {isSelected ? '👍' : '👎'}</Text>
-            </View>
-          </View>
-
           <View>
             <Text style={styles.textplace}>
               Document
@@ -142,6 +135,69 @@ const FamilyDataInput = ({ navigation }) => {
                 </View>
               </TouchableWithoutFeedback>
             </View>
+            </View>
+
+          <View style={{ flex: 1, flexDirection: 'row', }}>
+
+          <View style={styles.checkboxContainer}>
+            <Checkbox
+              status={graduityNominee ? 'checked' : 'unchecked'}
+              onPress={() => setGraduityNominee(!graduityNominee)}
+              color="#1976D2" 
+            />
+            <Text style={styles.label}>Graduity Nominee</Text>
+          </View>
+          <View style={styles.checkboxContainer}>
+            <Checkbox
+              status={pfNominee ? 'checked' : 'unchecked'}
+              onPress={() => setPFNominator(!pfNominee)}
+              color="#1976D2"
+            />
+            <Text style={styles.label}>PF Nominee</Text>
+          </View>
+          </View>
+
+          <View style={{ flex: 1, flexDirection: 'row', }}>
+
+          <View style={styles.checkboxContainer}>
+            <Checkbox
+              status={pensionNominee ? 'checked' : 'unchecked'}
+              onPress={() => setPensionNominee(!pensionNominee)}
+              color="#1976D2" 
+               />
+            <Text style={styles.label}>Pension Nominee</Text>
+          </View>
+          <View style={styles.checkboxContainer}>
+            <Checkbox
+              status={esicNominee ? 'checked' : 'unchecked'}
+              onPress={() =>setESICNominee (!esicNominee)}
+              color="#1976D2"
+            />
+            <Text style={styles.label}>ESIC Nominee</Text>
+          </View>
+          </View>
+
+          <View style={{ flex: 1, flexDirection: 'row', }}>
+
+          <View style={styles.checkboxContainer}>
+            <Checkbox
+              status={medicalInsurance ? 'checked' : 'unchecked'}
+              onPress={() => setMedicalInsurance(!medicalInsurance)}
+              color="#1976D2" 
+            />
+            <Text style={styles.label}>Medical Insurance</Text>
+          </View>
+          <View style={styles.checkboxContainer}>
+            <Checkbox
+              status={medicalInsuranceNominee ? 'checked' : 'unchecked'}
+              onPress={() => setMedicalInsuranceNominee(!medicalInsuranceNominee)}
+              color="#1976D2"
+            />
+            <Text style={styles.label}>Medical Insurance Nominee</Text>
+          </View>
+          </View>
+
+
             <View style={{ gap: 8 }}>
               <TouchableOpacity style={styles.btncontainer} onPress={() => navigation.navigate('Data')}>
                 <Text style={styles.buttonText}>Save</Text>
@@ -151,7 +207,7 @@ const FamilyDataInput = ({ navigation }) => {
                 <Text style={styles.clbuttonText}>Cancel</Text>
               </TouchableOpacity>
             </View>
-          </View>
+          
 
         </View>
       </ScrollView>
@@ -159,4 +215,4 @@ const FamilyDataInput = ({ navigation }) => {
   );
 };
 
-export default React.memo(FamilyDataInput );
+export default React.memo(FamilyDataInput);

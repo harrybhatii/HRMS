@@ -15,7 +15,7 @@ const WorkExperienceTab = () => {
   ];
 
   const handleActionPress = (itemId) => {
-    // Handle the action for the specific item (e.g., navigation, API call, etc.)
+    
     console.log(`Action pressed for item with id ${itemId}`);
   };
 
@@ -48,7 +48,7 @@ const WorkExperienceTab = () => {
           <Icon name="keyboard-arrow-down" size={24} color={colors.black} />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => { navigation.navigate('QualificationData'); }} style={styles.addbtn}>
+        <TouchableOpacity onPress={() => { navigation.navigate('WorkExpData'); }} style={styles.addbtn}>
           <Icon name="add" size={24} color={colors.white} />
           <Text style={styles.addbtntext}>Add</Text>
         </TouchableOpacity>

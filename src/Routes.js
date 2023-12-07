@@ -24,6 +24,7 @@ import Achievement from './screens/app/Tabs/ProfileTabs/SkillsandHobbiesData/Ach
 import TDSDecleration from './screens/app/tabsScreen/TDSDecleration';
 import data from './screens/app/Tabs/ProfileTabs/QualificationData/Data/data';
 import FamilyDataInput from './screens/app/Tabs/ProfileTabs/familyMembersdata/FamilyDataInput';
+import workexpDataInput from './screens/app/Tabs/ProfileTabs/Workexperiencedata/workexpDataInput';
 
 const Stack = createStackNavigator()
 
@@ -55,6 +56,7 @@ const Routes = () => {
       <Stack.Screen name='Achievement' component={Achievement}/>
       <Stack.Screen name='Data' component={data}/>
       <Stack.Screen name='FamilyData' component={FamilyDataInput}/>
+      <Stack.Screen name='WorkExpData' component={workexpDataInput}/>
     </Stack.Navigator>
   )
 }

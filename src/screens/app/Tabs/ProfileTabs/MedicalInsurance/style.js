@@ -136,19 +136,22 @@ const styles = StyleSheet.create({
     polcell: {
         color:'#554E56',
         marginLeft:40,
-        width:130,
+        width:70,
     },
     plcell: {
         color:'#554E56',
         marginLeft:10,
+        width:70,
     },
     Insurcell: {
         color:'#554E56',
-        marginLeft:10,
+        marginLeft:15,
+        marginRight:30,
+        width:100,
     },
     Premcell: {
         color:'#554E56',
-        marginLeft:10,
+        marginLeft:40,
     },
     actionButton: {
         alignItems: 'center',
