@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, Text, TouchableWithoutFeedback, View,Button } from 'react-native';
+import { SafeAreaView, Text, TouchableWithoutFeedback, View } from 'react-native';
 import styles from './style';
 import Input from '../../../../../../Components/Input';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
@@ -11,9 +11,17 @@ import DatePicker from 'react-native-date-picker'
 
 const workexpDataInput = ({ navigation }) => {
   const [selectedDocument, setSelectedDocument] = useState(null);
+  const [fromDate, setFromDate] = useState(new Date());
+  const [toDate, setToDate] = useState(new Date());
 
-  const [date, setDate] = useState(new Date())
-  const [open, setOpen] = useState(false)
+  const handleFromDateChange = date => {
+    setFromDate(date);
+  };
+
+  const handleToDateChange = date => {
+    setToDate(date);
+  };
+
 
 
   const SelectDoc = async () => {
@@ -46,25 +54,35 @@ const workexpDataInput = ({ navigation }) => {
             <Input placeholder="Enter Name" style={styles.passwordContainer} />
           </View>
 
-          <View style={{ flex: 1, flexDirection: 'row', gap: 5, }}>
+          <View style={{ flex: 1, flexDirection: 'row', gap: 8, }}>
             <View style={{ flex: 1 }}>
               <Text style={styles.textplace}>
                 From
                 <Text style={styles.star} > *</Text>
               </Text>
-              <Button title="Open" onPress={() => setOpen(true)} />
               <DatePicker
-                modal
-                open={open}
-                date={date}
-                onConfirm={(date) => {
-                  setOpen(false)
-                  setDate(date)
-                }}
-                onCancel={() => {
-                  setOpen(false)
-                }}
-              />
+              style={{ width:150, borderColor: 'gray', borderWidth: 1,  }}
+              date={fromDate}
+              mode="date"
+              placeholder="Select date"
+              format="YYYY-MM-DD"
+              minDate="1900-01-01"
+              maxDate="2100-01-01"
+              confirmBtnText="Confirm"
+              cancelBtnText="Cancel"
+              customStyles={{
+                dateIcon: {
+                  position: 'absolute',
+                  left: 0,
+                  top: 4,
+                  marginLeft: 0,
+                },
+                dateInput: {
+                  marginLeft: 36,
+                },
+              }}
+              onDateChange={handleFromDateChange}
+            />
             </View>
 
             <View style={{ flex: 1 }}>
@@ -72,10 +90,29 @@ const workexpDataInput = ({ navigation }) => {
                 To
                 <Text style={styles.star} > *</Text>
               </Text>
-              <Input
-                placeholder="Brother"
-                style={styles.passwordContainer}
-              />
+              <DatePicker
+              style={{width:150, borderColor: 'gray', borderWidth: 1 }}
+              date={toDate}
+              mode="date"
+              placeholder="Select date"
+              format="YYYY-MM-DD"
+              minDate="1900-01-01"
+              maxDate="2100-01-01"
+              confirmBtnText="Confirm"
+              cancelBtnText="Cancel"
+              customStyles={{
+                dateIcon: {
+                  position: 'absolute',
+                  left: 0,
+                  top: 4,
+                  marginLeft: 0,
+                },
+                dateInput: {
+                  marginLeft: 36,
+                },
+              }}
+              onDateChange={handleToDateChange}
+            />
             </View>
 
           </View>
@@ -123,30 +160,6 @@ const workexpDataInput = ({ navigation }) => {
               </Text>
               <Input
                 placeholder="25000"
-                style={styles.passwordContainer}
-              />
-            </View>
-          </View>
-
-          <View style={{ flex: 1, flexDirection: 'row', gap: 5 }}>
-            <View style={{ flex: 1 }}>
-              <Text style={styles.textplace}>
-                Total salary
-                <Text style={styles.star} > *</Text>
-              </Text>
-              <Input
-                placeholder="32000"
-                style={styles.passwordContainer}
-              />
-            </View>
-
-            <View style={{ flex: 1 }}>
-              <Text style={styles.textplace}>
-                Currency
-                <Text style={styles.star} > *</Text>
-              </Text>
-              <Input
-                placeholder="INR"
                 style={styles.passwordContainer}
               />
             </View>
