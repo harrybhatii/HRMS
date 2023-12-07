@@ -61,26 +61,11 @@ const workexpDataInput = ({ navigation }) => {
                 <Text style={styles.star} > *</Text>
               </Text>
               <DatePicker
-              style={{ width:150, borderColor: 'gray', borderWidth: 1,  }}
               date={fromDate}
-              mode="date"
               placeholder="Select date"
               format="YYYY-MM-DD"
-              minDate="1900-01-01"
-              maxDate="2100-01-01"
               confirmBtnText="Confirm"
               cancelBtnText="Cancel"
-              customStyles={{
-                dateIcon: {
-                  position: 'absolute',
-                  left: 0,
-                  top: 4,
-                  marginLeft: 0,
-                },
-                dateInput: {
-                  marginLeft: 36,
-                },
-              }}
               onDateChange={handleFromDateChange}
             />
             </View>
@@ -91,26 +76,14 @@ const workexpDataInput = ({ navigation }) => {
                 <Text style={styles.star} > *</Text>
               </Text>
               <DatePicker
-              style={{width:150, borderColor: 'gray', borderWidth: 1 }}
               date={toDate}
-              mode="date"
               placeholder="Select date"
               format="YYYY-MM-DD"
               minDate="1900-01-01"
               maxDate="2100-01-01"
               confirmBtnText="Confirm"
               cancelBtnText="Cancel"
-              customStyles={{
-                dateIcon: {
-                  position: 'absolute',
-                  left: 0,
-                  top: 4,
-                  marginLeft: 0,
-                },
-                dateInput: {
-                  marginLeft: 36,
-                },
-              }}
+              
               onDateChange={handleToDateChange}
             />
             </View>
